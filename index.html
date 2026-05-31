@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knockout Training Center | Santa Cruz, Bolivia</title>
+  <meta name="description" content="Donde nacen los verdaderos campeones. Boxeo, Kickboxing, Jiu-Jitsu, MMA, Crossfit y mas. Santa Cruz de la Sierra, Bolivia." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#inicio" class="nav-logo">KNOCK<span>OUT</span></a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#disciplinas">Disciplinas</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#galeria">Galer&iacute;a</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscribete</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio"      onclick="closeMenu()">Inicio</a>
+    <a href="#disciplinas" onclick="closeMenu()">Disciplinas</a>
+    <a href="#nosotros"    onclick="closeMenu()">Nosotros</a>
+    <a href="#precios"     onclick="closeMenu()">Precios</a>
+    <a href="#galeria"     onclick="closeMenu()">Galer&iacute;a</a>
+    <a href="#contacto"    onclick="closeMenu()">Contacto</a>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscribete ahora</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="inicio">
+    <!-- hero.jpg: 3 fighters — centrar en torso/caras -->
+    <div class="hero-slide active" style="background-image:url('img/hero.jpg'); background-position:center 40%;"></div>
+    <!-- hero3.jpg: equipo familiar — subir para ver caras -->
+    <div class="hero-slide" style="background-image:url('img/hero3.jpg'); background-position:center 15%;"></div>
+    <!-- hero6.jpg: pelea MMA en suelo -->
+    <div class="hero-slide" style="background-image:url('img/hero6.jpg'); background-position:center 20%;"></div>
+    <!-- hero7.jpg: Marcelo con niños — ver caras -->
+    <div class="hero-slide" style="background-image:url('img/hero7.jpg'); background-position:center 20%;"></div>
+    <!-- hero2.jpg: mujeres — ver caras -->
+    <div class="hero-slide" style="background-image:url('img/hero2.jpg'); background-position:center 10%;"></div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-overlay-sides"></div>
+    <div class="hero-red-glow"></div>
+    <div class="hero-lines"><span></span><span></span><span></span></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">Avalado por WAKO &middot; Santa Cruz, Bolivia</div>
+      <h1 class="hero-title" data-text="KNOCKOUT">KNOCK<span class="red">OUT</span></h1>
+      <p class="hero-subtitle">Training Center</p>
+      <p class="hero-slogan">"Donde nacen los verdaderos campeones"</p>
+      <p class="hero-valores">Disciplina &nbsp;&middot;&nbsp; Pasion &nbsp;&middot;&nbsp; Honor</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/59177338339" target="_blank" class="btn-primary">Empieza hoy</a>
+        <a href="#disciplinas" class="btn-outline">Ver disciplinas</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- DISCIPLINAS -->
+  <section id="disciplinas">
+    <div class="bg-pattern"></div>
+
+    <div class="section-header reveal" style="position:relative;z-index:1;">
+      <span class="section-tag">Lo que ofrecemos</span>
+      <h2 class="section-title">Nuestras <span class="red">Disciplinas</span></h2>
+      <div class="divider"></div>
+      <p class="desc">M&aacute;s de 7 disciplinas de artes marciales y fitness para todos los niveles y edades.</p>
+    </div>
+
+    <div class="disciplinas-grid">
+      <div class="disciplina-card card-boxeo reveal stagger-1">
+        <div class="card-content">
+          <div class="card-num">01</div>
+          <h3 class="card-name">Boxeo</h3>
+          <div class="card-bar"></div>
+          <p class="card-desc">T&eacute;cnica, potencia y velocidad. Entrenamiento completo para todos los niveles.</p>
+        </div>
+      </div>
+      <div class="disciplina-card card-kickboxing reveal stagger-2">
+        <div class="card-content">
+          <div class="card-num">02</div>
+          <h3 class="card-name">Kickboxing</h3>
+          <div class="card-bar"></div>
+          <p class="card-desc">Arte marcial de alto impacto. Pu&ntilde;os y patadas con rigor competitivo y t&eacute;cnico.</p>
+        </div>
+      </div>
+      <div class="disciplina-card card-jiujitsu reveal stagger-3">
+        <div class="card-content">
+          <div class="card-num">03</div>
+          <h3 class="card-name">Jiu-Jitsu</h3>
+          <div class="card-bar"></div>
+          <p class="card-desc">Arte marcial de suelo y sumisi&oacute;n. Grappling y defensa personal de &eacute;lite.</p>
+        </div>
+      </div>
+      <div class="disciplina-card card-mma reveal stagger-4">
+        <div class="card-content">
+          <div class="card-num">04</div>
+          <h3 class="card-name">MMA</h3>
+          <div class="card-bar"></div>
+          <p class="card-desc">Artes marciales mixtas. Combina striking, grappling y lucha en una sola disciplina.</p>
+        </div>
+      </div>
+      <div class="disciplina-card card-crossfit reveal stagger-5">
+        <div class="card-content">
+          <div class="card-num">05</div>
+          <h3 class="card-name">Crossfit</h3>
+          <div class="card-bar"></div>
+          <p class="card-desc">Entrenamiento funcional de alta intensidad. Fuerza, resistencia y agilidad.</p>
+
+        </div>
+      </div>
+      <div class="disciplina-card card-boxhit reveal stagger-6">
+        <div class="card-content">
+          <div class="card-num">06</div>
+          <h3 class="card-name">Boxhit</h3>
+          <div class="card-bar"></div>
+          <p class="card-desc">Clases grupales de boxeo funcional. Quema calor&iacute;as y mejora tu condici&oacute;n f&iacute;sica.</p>
+        </div>
+      </div>
+      <div class="disciplina-card card-gym reveal stagger-7">
+        <div class="card-content">
+          <div class="card-num">07</div>
+          <h3 class="card-name">Gym &amp; M&aacute;quinas</h3>
+          <div class="card-bar"></div>
+          <p class="card-desc">Zona de musculaci&oacute;n equipada. M&aacute;quinas modernas para complementar tu entrenamiento.</p>
+        </div>
+      </div>
+      <div class="card-cta reveal stagger-8">
+        <div>
+          <p class="card-cta-title">&iquest;Listo para empezar?</p>
+          <p>Prueba gratuita para nuevos alumnos.</p>
+        </div>
+        <a href="https://wa.me/59177338339" target="_blank">INSCRIBETE &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+    <div class="team-photo">
+      <div class="team-photo-bg"></div>
+      <div class="team-photo-overlay"></div>
+      <div class="team-photo-overlay-left"></div>
+      <div class="team-photo-text reveal-left">
+        <span class="section-tag">Familia Knockout</span>
+        <h2>Para todos.<br><span class="red">Sin excepcion.</span></h2>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item reveal stagger-1">
+        <div class="stat-value" data-target="10" data-suffix="+">10+</div>
+        <div class="stat-label">Anos de experiencia</div>
+      </div>
+      <div class="stat-item reveal stagger-2">
+        <div class="stat-value" data-target="7">7</div>
+        <div class="stat-label">Disciplinas</div>
+      </div>
+      <div class="stat-item reveal stagger-3">
+        <div class="stat-value" data-target="500" data-suffix="+">500+</div>
+        <div class="stat-label">Alumnos activos</div>
+      </div>
+      <div class="stat-item reveal stagger-4">
+        <div class="stat-value">WAKO</div>
+        <div class="stat-label">Reconocimiento oficial</div>
+      </div>
+    </div>
+
+    <div class="nosotros-content">
+      <div class="nosotros-text reveal-left">
+        <span class="section-tag">Qui&eacute;nes somos</span>
+        <h2 class="section-title" style="text-align:left;">
+          Entrenados por<br><span class="red">Campeones Mundiales</span>
+        </h2>
+        <div class="divider left"></div>
+        <p>Knock Out Training Center es el centro de artes marciales mas completo de Santa Cruz de la Sierra.
+          Fundado por <strong>Marcelo Salas</strong>, Mundialista de Kickboxing, nuestro equipo de instructores
+          de clase mundial forma campeones dentro y fuera del tatami.</p>
+        <p>Somos un gimnasio familiar que recibe desde los m&aacute;s peque&ntilde;os hasta adultos mayores.
+          Avalados por <strong>WAKO</strong> (World Association of Kickboxing Organizations),
+          ofrecemos el mas alto nivel de entrenamiento en Bolivia.</p>
+        <div class="instructor-tag" style="margin-top:1.5rem;">
+          <div class="name">Marcelo Salas</div>
+          <div class="role">Director &middot; Mundialista de Kickboxing</div>
+        </div>
+      </div>
+      <div class="photo-grid reveal-right">
+        <div class="photo-grid-item">
+          <img src="img/hero5.jpg" alt="Clases personalizadas" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="img/hero7.jpg" alt="Clases para ni&ntilde;os" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section id="precios">
+    <div class="section-header reveal" style="position:relative;z-index:1;">
+      <span class="section-tag">Membres&iacute;as</span>
+      <h2 class="section-title">Planes y <span class="red">Precios</span></h2>
+      <div class="divider"></div>
+      <p class="desc">Inversi&oacute;n m&iacute;nima, resultados m&aacute;ximos. Sin contratos de permanencia.</p>
+    </div>
+
+    <div class="precios-grid">
+      <div class="precio-card reveal-left">
+        <p class="plan-name">Por Disciplina</p>
+        <div class="precio-amount">
+          <span class="precio-num">250</span>
+          <div>
+            <span class="precio-currency">Bs.</span>
+            <span class="precio-period">/ mes</span>
+          </div>
+        </div>
+        <p class="plan-desc">Elige una disciplina y entrena sin l&iacute;mites.</p>
+        <ul class="plan-features">
+          <li><span class="feature-dot"></span> Acceso a 1 disciplina</li>
+          <li><span class="feature-dot"></span> Clases ilimitadas</li>
+          <li><span class="feature-dot"></span> Instructores certificados</li>
+          <li><span class="feature-dot"></span> Apto para todas las edades</li>
+        </ul>
+        <a href="https://wa.me/59177338339" target="_blank" class="btn-outline" style="display:block;text-align:center;padding:0.9rem;">
+          Elegir disciplina
+        </a>
+      </div>
+      <div class="precio-card featured reveal-right">
+        <span class="badge-recommended">Recomendado</span>
+        <p class="plan-name">Paquete Completo</p>
+        <div class="precio-amount">
+          <span class="precio-num">300</span>
+          <div>
+            <span class="precio-currency">Bs.</span>
+            <span class="precio-period">/ mes</span>
+          </div>
+        </div>
+        <p class="plan-desc">Acceso total al gym y todas las disciplinas.</p>
+        <ul class="plan-features">
+          <li><span class="feature-dot"></span> Todas las disciplinas incluidas</li>
+          <li><span class="feature-dot"></span> Zona de maquinas y gym</li>
+          <li><span class="feature-dot"></span> Clases ilimitadas</li>
+          <li><span class="feature-dot"></span> Instructores certificados</li>
+          <li><span class="feature-dot"></span> Apto para todas las edades</li>
+          <li><span class="feature-dot"></span> Mejor valor del mercado</li>
+        </ul>
+        <a href="https://wa.me/59177338339" target="_blank" class="btn-primary" style="display:block;text-align:center;">
+          &iexcl;Lo quiero!
+        </a>
+      </div>
+    </div>
+    <p class="precios-note">* Consulta disponibilidad y horarios especiales para ni&ntilde;os via WhatsApp</p>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="section-header reveal">
+      <span class="section-tag">Nuestro Mundo</span>
+      <h2 class="section-title">Galer&iacute;a</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="galeria-grid">
+      <div class="galeria-item g-span-2-2 reveal stagger-1">
+        <img src="img/hero.jpg" alt="Fighters Knockout Training Center" style="object-position:center 40%;" />
+      </div>
+      <div class="galeria-item reveal stagger-2">
+        <img src="img/hero4.jpg" alt="Interior del gym" style="object-position:center center;" />
+      </div>
+      <div class="galeria-item reveal stagger-3">
+        <img src="img/hero6.jpg" alt="Pelea MMA" style="object-position:center 20%;" />
+      </div>
+      <div class="galeria-item reveal stagger-4">
+        <img src="img/hero2.jpg" alt="Entrenadoras" style="object-position:center 10%;" />
+      </div>
+      <div class="galeria-item reveal stagger-5">
+        <img src="img/hero5.jpg" alt="Entrenamiento personalizado" style="object-position:center 25%;" />
+      </div>
+      <div class="galeria-item g-span-1-2 reveal stagger-6">
+        <img src="img/hero7.jpg" alt="Clases para ni&ntilde;os" style="object-position:center 20%;" />
+      </div>
+    </div>
+
+    <div class="galeria-fb reveal">
+      <a href="https://www.facebook.com/knockoutbolivia" target="_blank" class="btn-ghost">
+        Ver mas en Facebook &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="contacto-bg"></div>
+    <div class="contacto-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">Estamos aqu&iacute;</span>
+        <h2 class="section-title">Contacto</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="contacto-grid">
+        <div class="contacto-info reveal-left">
+          <div class="info-item">
+            <div class="info-icon">&#128241;</div>
+            <div>
+              <p class="info-label">WhatsApp</p>
+              <a href="https://wa.me/59177338339" class="info-value">+591 77338339</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#128280;</div>
+            <div>
+              <p class="info-label">Facebook</p>
+              <a href="https://www.facebook.com/knockoutbolivia" target="_blank" class="info-value">/knockoutbolivia</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#128205;</div>
+            <div>
+              <p class="info-label">Ubicaci&oacute;n</p>
+              <span class="info-value plain">Santa Cruz de la Sierra, Bolivia</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#128336;</div>
+            <div>
+              <p class="info-label">Horarios</p>
+              <span class="info-value plain">Lun &ndash; Sab: 6:00 AM &ndash; 9:00 PM</span><br>
+              <span class="info-value plain">Domingo: 8:00 AM &ndash; 12:00 PM</span>
+            </div>
+          </div>
+          <div class="wako-box">
+            <p class="tag">Reconocimiento oficial</p>
+            <p class="name">Avalados por WAKO</p>
+            <p class="sub">World Association of Kickboxing Organizations</p>
+          </div>
+        </div>
+
+        <div class="contacto-cta-card reveal-right">
+          <h3>&iquest;Listo para <span class="red">entrenar?</span></h3>
+          <p>Cont&aacute;ctanos por WhatsApp para agendar tu clase de prueba gratuita. Sin compromiso.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20las%20clases%20en%20Knockout%20Training%20Center"
+             target="_blank" class="btn-whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Escribenos por WhatsApp
+          </a>
+          <a href="https://www.facebook.com/knockoutbolivia" target="_blank" class="btn-fb">
+            Seguirnos en Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">KNOCK<span class="red">OUT</span></div>
+        <div class="footer-brand-sub">Training Center</div>
+        <p>Donde nacen los verdaderos campeones.<br>Santa Cruz de la Sierra, Bolivia.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navegacion</p>
+        <ul class="footer-links">
+          <li><a href="#disciplinas">Disciplinas</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#galeria">Galer&iacute;a</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contacto</p>
+        <div class="footer-contact-items">
+          <a href="https://wa.me/59177338339">&#128241; +591 77338339</a>
+          <a href="https://www.facebook.com/knockoutbolivia" target="_blank">&#128280; knockoutbolivia</a>
+          <span>&#127942; Avalados por WAKO</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Knockout Training Center. Todos los derechos reservados.</p>
+      <p>Disciplina &middot; Pasion &middot; Honor</p>
+    </div>
+    <div class="footer-dev">
+      <span class="footer-dev-text">Dise&ntilde;ado &amp; desarrollado por</span>
+      <span class="footer-dev-dot">&#9656;</span>
+      <a href="https://sebastian-delgado.netlify.app/" target="_blank" rel="noopener noreferrer" class="footer-dev-name">Sebasti&aacute;n Delgado</a>
+      <span class="footer-dev-dot">&middot;</span>
+      <span class="footer-dev-text">Desarrollador Web</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/59177338339?text=Hola!%20Me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20las%20clases%20en%20Knockout%20Training%20Center"
+     target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    /* ── Navbar scroll ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ── Mobile menu ── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    /* ── Hero slideshow ── */
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4500);
+
+    /* ── Scroll reveal con IntersectionObserver ── */
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    /* ── Contadores animados ── */
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      if (isNaN(target)) return;
+      let count = 0;
+      const duration = 1200;
+      const step = target / (duration / 16);
+      const timer = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.floor(count) + suffix;
+      }, 16);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-value[data-target]').forEach(el => {
+      counterObserver.observe(el);
+    });
+
+    /* ── Parallax suave en hero ── */
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      document.querySelectorAll('.hero-slide').forEach(slide => {
+        slide.style.transform = `translateY(${scrollY * 0.3}px)`;
+      });
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
