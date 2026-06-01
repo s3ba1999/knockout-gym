@@ -446,7 +446,21 @@ body {
 
 .disciplina-card:hover .card-bar { width: 64px; }
 
-.card-desc { color: #aaa; font-size: 0.82rem; line-height: 1.6; }
+.card-desc { color: #aaa; font-size: 0.82rem; line-height: 1.6; margin-bottom: 1rem; }
+
+.card-wa-btn {
+  display: inline-block;
+  color: #CC0000;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(204,0,0,0.3);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.card-wa-btn:hover { color: #ff4444; border-color: #ff4444; }
 
 .card-cta {
   background: #CC0000;
@@ -497,19 +511,19 @@ body {
   inset: 0;
   background-image: url('img/hero3.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 18%;
 }
 
 .team-photo-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), #000 95%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.05), #000 92%);
 }
 
 .team-photo-overlay-left {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.6), transparent 60%);
+  background: linear-gradient(to right, rgba(0,0,0,0.7), transparent 50%);
 }
 
 .team-photo-text {
