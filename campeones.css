@@ -1,0 +1,416 @@
+/* ══════════════════════════════════════
+   CAMPEONES PAGE — CSS
+   ══════════════════════════════════════ */
+
+/* ── Hero ── */
+.camp-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.camp-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 40%;
+}
+.camp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.85) 100%);
+}
+.camp-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 2rem;
+  text-align: center;
+}
+.camp-hero-title {
+  font-size: clamp(3rem, 9vw, 7rem);
+  line-height: 1;
+  color: #fff;
+  margin: 1rem 0 0.5rem;
+}
+.camp-hero-sub {
+  font-style: italic;
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.camp-hero-line {
+  width: 60px;
+  height: 3px;
+  background: #CC0000;
+  margin: 0 auto 1.5rem;
+}
+.camp-hero-desc {
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  font-size: 0.95rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.camp-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  animation: bounce-down 2s infinite;
+  z-index: 2;
+}
+
+/* ── Intro Marcelo ── */
+.camp-intro {
+  background: #000;
+  padding: 6rem 2rem;
+}
+.camp-intro-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: center;
+}
+.camp-photo-frame {
+  position: relative;
+  overflow: hidden;
+}
+.camp-photo-frame img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  filter: grayscale(0.3);
+  display: block;
+}
+.camp-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px;
+  width: 50%;
+  height: 50%;
+  border-top: 3px solid #CC0000;
+  border-left: 3px solid #CC0000;
+  z-index: 2;
+}
+.camp-photo-frame::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; right: -4px;
+  width: 50%;
+  height: 50%;
+  border-bottom: 3px solid #CC0000;
+  border-right: 3px solid #CC0000;
+  z-index: 2;
+}
+.camp-photo-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(204,0,0,0.9);
+  padding: 0.5rem 1rem;
+  z-index: 3;
+}
+.camp-photo-badge span:first-child {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+.camp-photo-badge span:last-child {
+  display: block;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.camp-name {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.camp-bio {
+  color: #777;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+.camp-bio strong { color: #ddd; }
+.camp-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.camp-stat { display: flex; flex-direction: column; gap: 0.25rem; }
+.camp-stat-num { font-size: 2.5rem; line-height: 1; }
+.camp-stat-label { color: #444; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; }
+
+/* ── Timeline ── */
+.timeline-section {
+  background: #0a0a0a;
+  padding: 6rem 2rem 8rem;
+  position: relative;
+}
+.timeline-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.timeline-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.timeline-spine {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #CC0000 5%, #CC0000 95%, transparent);
+  transform: translateX(-50%);
+}
+
+/* Timeline items */
+.tl-item {
+  position: relative;
+  width: 44%;
+  margin-bottom: 4rem;
+}
+.tl-left  { margin-right: auto; text-align: right; }
+.tl-right { margin-left: auto;  text-align: left; }
+
+/* Dot on the spine */
+.tl-dot {
+  position: absolute;
+  top: 1.2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #CC0000;
+  border: 2px solid #0a0a0a;
+  box-shadow: 0 0 0 3px #CC0000;
+  z-index: 2;
+}
+.tl-left  .tl-dot { right: -8.5%; }
+.tl-right .tl-dot { left: -8.5%; }
+
+.tl-dot-highlight {
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 0 4px #CC0000, 0 0 15px rgba(204,0,0,0.5);
+}
+.tl-left  .tl-dot-highlight { right: calc(-8.5% - 2px); }
+.tl-right .tl-dot-highlight { left: calc(-8.5% - 2px); }
+
+.tl-dot-now {
+  width: 20px;
+  height: 20px;
+  animation: dot-pulse 2s infinite;
+}
+@keyframes dot-pulse {
+  0%,100% { box-shadow: 0 0 0 4px #CC0000, 0 0 20px rgba(204,0,0,0.6); }
+  50%      { box-shadow: 0 0 0 8px rgba(204,0,0,0.2), 0 0 30px rgba(204,0,0,0.3); }
+}
+.tl-left  .tl-dot-now { right: calc(-8.5% - 3px); }
+.tl-right .tl-dot-now { left: calc(-8.5% - 3px); }
+
+/* Cards */
+.tl-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1.5rem;
+  transition: border-color 0.3s;
+}
+.tl-card:hover { border-color: rgba(204,0,0,0.3); }
+
+.tl-card-highlight {
+  border-color: rgba(204,0,0,0.3);
+  background: rgba(204,0,0,0.04);
+}
+.tl-card-highlight:hover { border-color: rgba(204,0,0,0.6); }
+
+.tl-star {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #CC0000;
+  margin-bottom: 0.5rem;
+}
+.tl-year {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.15);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.tl-year.red { color: #CC0000; }
+.tl-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.tl-text {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+.tl-text strong { color: #aaa; }
+.tl-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #CC0000;
+  opacity: 0.8;
+}
+
+/* Connector lines left/right */
+.tl-left .tl-card::after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  right: -6%;
+  width: 6%;
+  height: 1px;
+  background: rgba(204,0,0,0.3);
+}
+.tl-right .tl-card::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: -6%;
+  width: 6%;
+  height: 1px;
+  background: rgba(204,0,0,0.3);
+}
+
+/* ── Renzo ── */
+.camp-renzo {
+  background: #000;
+  padding: 6rem 2rem;
+}
+.camp-renzo-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.camp-titles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.camp-title-badge {
+  border: 1px solid rgba(204,0,0,0.4);
+  background: rgba(204,0,0,0.05);
+  padding: 0.75rem 1.25rem;
+}
+.camp-title-badge span:first-child {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #CC0000;
+  line-height: 1;
+}
+.camp-title-badge span:last-child {
+  font-size: 0.65rem;
+  color: #666;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── CTA Final ── */
+.camp-cta {
+  padding: 8rem 2rem;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.camp-cta::before {
+  content: 'KO';
+  position: absolute;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30vw;
+  color: rgba(204,0,0,0.03);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  letter-spacing: -0.05em;
+}
+.camp-cta-inner { position: relative; z-index: 1; }
+.camp-cta-title {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: #fff;
+  line-height: 1.05;
+  margin: 1rem 0 1.5rem;
+}
+.camp-cta-sub {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .camp-intro-inner,
+  .camp-renzo-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .camp-renzo-inner { direction: ltr; }
+  .camp-renzo-photo { order: -1; }
+  .camp-photo-frame img { aspect-ratio: 4/3; }
+
+  .timeline-spine { left: 20px; }
+  .tl-item { width: 80%; margin-left: 60px !important; text-align: left !important; }
+  .tl-left .tl-dot,
+  .tl-right .tl-dot { left: -46px !important; right: auto !important; }
+  .tl-left .tl-dot-highlight,
+  .tl-right .tl-dot-highlight { left: -48px !important; right: auto !important; }
+  .tl-left .tl-dot-now,
+  .tl-right .tl-dot-now { left: -49px !important; right: auto !important; }
+  .tl-left .tl-card::after { display: none; }
+  .tl-right .tl-card::before { display: none; }
+
+  .camp-stats { gap: 1.5rem; flex-wrap: wrap; }
+}
+
+@media (max-width: 600px) {
+  .camp-intro, .camp-renzo, .timeline-section { padding: 4rem 1.25rem; }
+  .tl-item { width: 85%; margin-left: 50px !important; }
+  .timeline-spine { left: 14px; }
+  .tl-left .tl-dot,
+  .tl-right .tl-dot { left: -38px !important; }
+  .camp-stats { flex-direction: column; gap: 1rem; }
+}
