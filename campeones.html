@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuestros Campeones | Knockout Training Center</title>
-  <meta name="description" content="Conoce a los campeones que forjaron Knockout Training Center. Marcelo Salas Marchetti y Renzo Martinez, orgullo boliviano." />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="campeones.css" />
 </head>
 <body>
 
-  <!-- NAV -->
   <nav id="navbar">
     <a href="index.html" class="nav-logo">KNOCK<span>OUT</span></a>
     <ul class="nav-links">
@@ -22,373 +20,153 @@
       <li><a href="index.html#contacto">Contacto</a></li>
     </ul>
     <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscr&iacute;bete</a>
-    <button class="hamburger" id="hamburger" aria-label="Men&uacute;">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </nav>
-
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"           onclick="closeMenu()">Inicio</a>
+    <a href="index.html"             onclick="closeMenu()">Inicio</a>
     <a href="index.html#disciplinas" onclick="closeMenu()">Disciplinas</a>
-    <a href="index.html#nosotros"  onclick="closeMenu()">Nosotros</a>
-    <a href="index.html#precios"   onclick="closeMenu()">Precios</a>
-    <a href="campeones.html"       onclick="closeMenu()" style="color:#CC0000;">Campeones</a>
-    <a href="index.html#contacto"  onclick="closeMenu()">Contacto</a>
+    <a href="index.html#nosotros"    onclick="closeMenu()">Nosotros</a>
+    <a href="index.html#precios"     onclick="closeMenu()">Precios</a>
+    <a href="campeones.html"         onclick="closeMenu()" style="color:#CC0000;">Campeones</a>
+    <a href="index.html#contacto"    onclick="closeMenu()">Contacto</a>
   </div>
 
-  <!-- HERO CAMPEONES -->
-  <section class="camp-hero">
-    <div class="camp-hero-bg" style="background-image:url('img/hero.jpg'); background-position:center 40%;"></div>
-    <div class="camp-hero-overlay"></div>
-    <div class="camp-hero-content">
+  <!-- HERO -->
+  <section class="gc-hero">
+    <div class="gc-hero-bg" style="background-image:url('img/hero4.jpg');"></div>
+    <div class="gc-hero-overlay"></div>
+    <div class="gc-hero-content">
       <span class="section-tag">Knockout Training Center</span>
-      <h1 class="camp-hero-title bebas">Conoce a Nuestros<br><span class="red">Campeones</span></h1>
-      <p class="camp-hero-sub">Forjados en el esfuerzo. Reconocidos en el mundo.</p>
-      <div class="camp-hero-line"></div>
-      <p class="camp-hero-desc">
-        Detr&aacute;s de cada alumno hay un campe&oacute;n que abri&oacute; el camino.
-        Estas son las historias de quienes construyeron Knockout Training Center
-        desde sus bases y llevaron el nombre de Bolivia al mundo.
-      </p>
+      <h1 class="bebas gc-hero-title">Nuestros<br><span class="red">Campeones</span></h1>
+      <p class="gc-hero-sub">Historias forjadas con sudor, disciplina y sacrificio.</p>
     </div>
-    <div class="camp-scroll-hint">
-      <span>Descubre su historia</span>
-      <div class="scroll-line"></div>
+    <div class="gc-hero-arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       MARCELO SALAS — INTRO
-  ══════════════════════════════════════ -->
-  <section class="camp-intro reveal">
-    <div class="camp-intro-inner">
-      <div class="camp-intro-photo reveal-left">
-        <div class="camp-photo-frame">
-          <img src="img/hero7.jpg" alt="Marcelo Salas con sus alumnos" />
-          <div class="camp-photo-badge">
-            <span class="bebas">3er DAN</span>
-            <span>Kickboxing</span>
-          </div>
+  <!-- INTRO -->
+  <div class="gc-intro reveal">
+    <p>
+      Detr&aacute;s de cada golpe hay una historia. Detr&aacute;s de cada t&iacute;tulo, a&ntilde;os de sacrificio.
+      Estos son los campeones que pusieron el nombre de Bolivia en el mapa mundial del combate
+      y que hoy siguen formando a la pr&oacute;xima generaci&oacute;n.
+    </p>
+  </div>
+
+  <!-- CAMPEONES GRID -->
+  <section class="gc-grid">
+
+    <!-- Marcelo Salas -->
+    <a href="marcelo-salas.html" class="gc-card reveal-left">
+      <div class="gc-card-bg" style="background-image:url('img/hero5.jpg'); background-position:center 20%;"></div>
+      <div class="gc-card-overlay"></div>
+      <div class="gc-card-number bebas">01</div>
+      <div class="gc-card-body">
+        <div class="gc-card-tags">
+          <span>Kickboxing</span>
+          <span>Taekwondo</span>
+          <span>Entrenador</span>
         </div>
-      </div>
-      <div class="camp-intro-text reveal-right">
-        <span class="section-tag">El Maestro</span>
-        <h2 class="bebas camp-name">Marcelo Salas<br><span class="red">Marchetti</span></h2>
-        <div class="divider left"></div>
-        <p class="camp-bio">
-          Nacido el <strong>24 de septiembre de 1967</strong> en Santa Cruz de la Sierra, Bolivia,
-          Marcelo Alberto Salas Marchetti es uno de los m&aacute;s grandes referentes de las artes
-          marciales en el pa&iacute;s. Cintur&oacute;n negro <strong>3er DAN en Kickboxing</strong>
-          y <strong>1er DAN en Taekwondo</strong>, su carrera abarca m&aacute;s de cuatro d&eacute;cadas
-          de dedicaci&oacute;n al deporte de combate.
+        <h2 class="bebas gc-card-name">Marcelo Salas<br><span class="red">Marchetti</span></h2>
+        <p class="gc-card-desc">
+          3er DAN en Kickboxing. El &uacute;nico boliviano en clasificar al Campeonato
+          Mundial WAKO. Fundador del Knockout Training Center y Presidente de WAKO Bolivia.
+          M&aacute;s de 40 a&ntilde;os forjando campeones.
         </p>
-        <p class="camp-bio">
-          Fue el <strong>&uacute;nico boliviano en clasificar a un Campeonato Mundial de Kickboxing</strong>
-          bajo la federaci&oacute;n WAKO en el a&ntilde;o 2001, hito que marc&oacute; un antes y un despu&eacute;s
-          en la historia del deporte boliviano. Hoy dirige el <strong>Knockout Training Center</strong>
-          y preside <strong>WAKO Bolivia</strong>, formando a la nueva generaci&oacute;n de campeones.
+        <div class="gc-card-stats">
+          <div><span class="bebas red">2001</span><span>Mundial WAKO</span></div>
+          <div><span class="bebas red">3er</span><span>DAN Kickboxing</span></div>
+          <div><span class="bebas red">40+</span><span>A&ntilde;os activo</span></div>
+        </div>
+        <div class="gc-card-cta">
+          <span>Ver su trayectoria</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- Renzo Martinez -->
+    <a href="renzo-martinez.html" class="gc-card reveal-right">
+      <div class="gc-card-bg" style="background-image:url('img/hero6.jpg'); background-position:center 15%;"></div>
+      <div class="gc-card-overlay"></div>
+      <div class="gc-card-number bebas">02</div>
+      <div class="gc-card-body">
+        <div class="gc-card-tags">
+          <span>MMA</span>
+          <span>Kickboxing</span>
+          <span>Competidor</span>
+        </div>
+        <h2 class="bebas gc-card-name">Renzo Mart&iacute;nez<br><span class="red">&ldquo;El Rayo&rdquo;</span></h2>
+        <p class="gc-card-desc">
+          Bicampe&oacute;n WGP y KOCP. Con m&aacute;s de 9 victorias en su palmar&eacute;s,
+          &ldquo;El Rayo&rdquo; es uno de los peleadores m&aacute;s electrizantes del pa&iacute;s.
+          Velocidad, precisi&oacute;n y un coraz&oacute;n que no conoce el l&iacute;mite.
         </p>
-        <div class="camp-stats">
-          <div class="camp-stat">
-            <span class="bebas camp-stat-num red">40+</span>
-            <span class="camp-stat-label">A&ntilde;os en artes marciales</span>
-          </div>
-          <div class="camp-stat">
-            <span class="bebas camp-stat-num red">3er</span>
-            <span class="camp-stat-label">DAN Kickboxing</span>
-          </div>
-          <div class="camp-stat">
-            <span class="bebas camp-stat-num red">WAKO</span>
-            <span class="camp-stat-label">Presidente Bolivia</span>
-          </div>
+        <div class="gc-card-stats">
+          <div><span class="bebas red">9+</span><span>Victorias</span></div>
+          <div><span class="bebas red">WGP</span><span>Latinoam&eacute;rica</span></div>
+          <div><span class="bebas red">66</span><span>KG</span></div>
+        </div>
+        <div class="gc-card-cta">
+          <span>Ver su trayectoria</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </div>
-    </div>
+    </a>
+
   </section>
 
-  <!-- ══════════════════════════════════════
-       TIMELINE MARCELO SALAS
-  ══════════════════════════════════════ -->
-  <section class="timeline-section">
-    <div class="timeline-header reveal">
-      <span class="section-tag">Su trayectoria</span>
-      <h2 class="bebas timeline-title">El camino<br><span class="red">de un campe&oacute;n</span></h2>
-      <div class="divider"></div>
-    </div>
-
-    <div class="timeline">
-      <div class="timeline-spine"></div>
-
-      <!-- 1967 -->
-      <div class="tl-item tl-left reveal-left">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas">1967</span>
-          <h3 class="tl-title">El comienzo</h3>
-          <p class="tl-text">
-            Nace el <strong>24 de septiembre</strong> en Santa Cruz de la Sierra, Bolivia.
-            Desde peque&ntilde;o muestra una afinidad natural por la disciplina y el deporte.
-          </p>
-        </div>
-      </div>
-
-      <!-- 1980s -->
-      <div class="tl-item tl-right reveal-right">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas">1980s</span>
-          <h3 class="tl-title">Primeros pasos en las artes marciales</h3>
-          <p class="tl-text">
-            Inicia su formaci&oacute;n en artes marciales, comenzando con
-            <strong>Taekwondo</strong>, donde alcanza el cintur&oacute;n negro 1er DAN.
-            El rigor de la disciplina oriental forja su car&aacute;cter competitivo.
-          </p>
-          <div class="tl-tag">Cintur&oacute;n Negro 1er DAN · Taekwondo</div>
-        </div>
-      </div>
-
-      <!-- 1990s -->
-      <div class="tl-item tl-left reveal-left">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas">1990s</span>
-          <h3 class="tl-title">La transici&oacute;n al Kickboxing</h3>
-          <p class="tl-text">
-            Descubre el <strong>Kickboxing</strong> y encuentra su verdadera vocaci&oacute;n.
-            Comienza a competir a nivel nacional y sudamericano, represent&aacute;ndo a Bolivia
-            en torneos internacionales. Avanza r&aacute;pidamente en su formaci&oacute;n t&eacute;cnica.
-          </p>
-          <div class="tl-tag">Competencias Sudamericanas</div>
-        </div>
-      </div>
-
-      <!-- 2001 -->
-      <div class="tl-item tl-right reveal-right">
-        <div class="tl-dot tl-dot-highlight"></div>
-        <div class="tl-card tl-card-highlight">
-          <div class="tl-star">&#9733; HITO HIST&Oacute;RICO</div>
-          <span class="tl-year bebas red">2001</span>
-          <h3 class="tl-title">El primer boliviano en el mundo</h3>
-          <p class="tl-text">
-            Logra el hito m&aacute;s importante de su carrera deportiva: se convierte en el
-            <strong>&uacute;nico boliviano en clasificar a un Campeonato Mundial de Kickboxing WAKO</strong>.
-            Un momento que pone a Bolivia en el mapa mundial del kickboxing.
-          </p>
-          <div class="tl-tag">Campeonato Mundial WAKO · Clasificado Nacional</div>
-        </div>
-      </div>
-
-      <!-- 2001-2005 -->
-      <div class="tl-item tl-left reveal-left">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas">2001 — 2005</span>
-          <h3 class="tl-title">Cintur&oacute;n Negro 3er DAN</h3>
-          <p class="tl-text">
-            Alcanza el <strong>cintur&oacute;n negro 3er DAN en Kickboxing</strong>, una de las
-            m&aacute;ximas distinciones t&eacute;cnicas en el deporte. Consolida su reputaci&oacute;n
-            como uno de los m&aacute;s completos practicantes de Bolivia.
-          </p>
-          <div class="tl-tag">3er DAN Kickboxing · WAKO</div>
-        </div>
-      </div>
-
-      <!-- 2006 -->
-      <div class="tl-item tl-right reveal-right">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas">2006</span>
-          <h3 class="tl-title">Programa de TV &ldquo;Knockout&rdquo;</h3>
-          <p class="tl-text">
-            Lanza su propio <strong>programa de televisi&oacute;n</strong> llamado &ldquo;Knockout&rdquo;,
-            dedicado a difundir las artes marciales en Bolivia. Lleva la cultura del deporte
-            de combate a miles de hogares bolivianos, sembrando la semilla en nuevas generaciones.
-          </p>
-          <div class="tl-tag">Medios · Difusi&oacute;n deportiva</div>
-        </div>
-      </div>
-
-      <!-- 2010 -->
-      <div class="tl-item tl-left reveal-left">
-        <div class="tl-dot tl-dot-highlight"></div>
-        <div class="tl-card tl-card-highlight">
-          <div class="tl-star">&#9733; FUNDACI&Oacute;N</div>
-          <span class="tl-year bebas red">2010</span>
-          <h3 class="tl-title">Nace Knockout Training Center</h3>
-          <p class="tl-text">
-            Funda el <strong>Knockout Training Center</strong> en Santa Cruz de la Sierra.
-            Su visi&oacute;n: crear un espacio donde cualquier persona, sin importar su edad,
-            pueda entrenarse con est&aacute;ndares de clase mundial bajo la filosof&iacute;a de
-            <em>Disciplina, Pasi&oacute;n y Honor</em>.
-          </p>
-          <div class="tl-tag">Knockout Training Center · Santa Cruz, Bolivia</div>
-        </div>
-      </div>
-
-      <!-- 2015 -->
-      <div class="tl-item tl-right reveal-right">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas">2015</span>
-          <h3 class="tl-title">Bolivia brilla en Sudam&eacute;rica</h3>
-          <p class="tl-text">
-            El equipo boliviano bajo su direcci&oacute;n logra <strong>medallas de oro
-            en el Campeonato Sudamericano de Kickboxing</strong>, demostrando que
-            el nivel t&eacute;cnico del pa&iacute;s ha alcanzado la &eacute;lite continental.
-          </p>
-          <div class="tl-tag">Sudamericano Kickboxing · Medallas de Oro</div>
-        </div>
-      </div>
-
-      <!-- 2018 -->
-      <div class="tl-item tl-left reveal-left">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas">2018</span>
-          <h3 class="tl-title">Presidente de WAKO Bolivia</h3>
-          <p class="tl-text">
-            Asume la presidencia de <strong>WAKO Bolivia</strong>, la filial nacional de la
-            World Association of Kickboxing Organizations. Desde este cargo impulsa
-            el desarrollo del kickboxing en todo el pa&iacute;s, organizando competencias
-            y formando nuevos atletas.
-          </p>
-          <div class="tl-tag">WAKO Bolivia · Presidente Nacional</div>
-        </div>
-      </div>
-
-      <!-- 2021 -->
-      <div class="tl-item tl-right reveal-right">
-        <div class="tl-dot tl-dot-highlight"></div>
-        <div class="tl-card tl-card-highlight">
-          <div class="tl-star">&#9733; RECORD</div>
-          <span class="tl-year bebas red">2021</span>
-          <h3 class="tl-title">9 oros en el Sudamericano de Brasil</h3>
-          <p class="tl-text">
-            El <strong>Team Marcelo Salas</strong> logra su mejor actuaci&oacute;n hist&oacute;rica
-            en el <strong>Campeonato Sudamericano de Kickboxing en Brasil</strong>, conquistando
-            <strong>9 medallas de oro</strong>. Un resultado sin precedentes para el deporte
-            boliviano de combate.
-          </p>
-          <div class="tl-tag">Sudamericano Brasil 2021 · 9 Medallas de Oro</div>
-        </div>
-      </div>
-
-      <!-- Hoy -->
-      <div class="tl-item tl-left reveal-left">
-        <div class="tl-dot tl-dot-now"></div>
-        <div class="tl-card">
-          <span class="tl-year bebas red">Hoy</span>
-          <h3 class="tl-title">Formando la pr&oacute;xima generaci&oacute;n</h3>
-          <p class="tl-text">
-            Contin&uacute;a al frente del <strong>Knockout Training Center</strong>,
-            entrenando personalmente a cientos de alumnos de todas las edades.
-            Su legado no son solo sus t&iacute;tulos — son cada uno de los campeones
-            que ha formado a lo largo de su vida.
-          </p>
-          <div class="tl-tag">Knockout Training Center · Activo</div>
-        </div>
-      </div>
-
-    </div>
+  <!-- QUOTE -->
+  <section class="gc-quote reveal">
+    <blockquote class="bebas">&ldquo;La grandeza no se regala.<br><span class="red">Se conquista rep a rep, round a round.&rdquo;</span></blockquote>
+    <cite>&mdash; Marcelo Salas, Director Knockout Training Center</cite>
   </section>
 
-  <!-- ══════════════════════════════════════
-       RENZO MARTÍNEZ
-  ══════════════════════════════════════ -->
-  <section class="camp-renzo reveal">
-    <div class="camp-renzo-inner">
-      <div class="camp-renzo-text reveal-left">
-        <span class="section-tag">El Rayo</span>
-        <h2 class="bebas camp-name">Renzo Mart&iacute;nez<br><span class="red">&ldquo;El Rayo&rdquo;</span></h2>
-        <div class="divider left"></div>
-        <p class="camp-bio">
-          Nacido en Santa Cruz de la Sierra, Renzo Mart&iacute;nez es uno de los peleadores
-          m&aacute;s electrizantes formados en el Knockout Training Center. Su velocidad y
-          potencia le valieron el apodo <strong>&ldquo;El Rayo&rdquo;</strong>, un nombre
-          que refleja perfectamente su estilo de pelea: r&aacute;pido, preciso y devastador.
-        </p>
-        <p class="camp-bio">
-          Bicampe&oacute;n con t&iacute;tulos <strong>KOCP Featherweight</strong> y
-          <strong>WGP Bantamweight</strong>, Renzo ha llevado el nombre de Bolivia y del
-          Knockout Training Center a escenarios internacionales, demostrando que el
-          talento forjado en Santa Cruz compite al m&aacute;s alto nivel.
-        </p>
-        <div class="camp-titles">
-          <div class="camp-title-badge">
-            <span class="bebas">KOCP</span>
-            <span>Featherweight Champion</span>
-          </div>
-          <div class="camp-title-badge">
-            <span class="bebas">WGP</span>
-            <span>Bantamweight Champion</span>
-          </div>
-        </div>
-      </div>
-      <div class="camp-renzo-photo reveal-right">
-        <div class="camp-photo-frame">
-          <img src="img/hero6.jpg" alt="Pelea en Knockout Training Center" style="object-position:center 20%;" />
-          <div class="camp-photo-badge">
-            <span class="bebas">El Rayo</span>
-            <span>Santa Cruz, Bolivia</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- CTA -->
+  <section class="gc-cta reveal">
+    <h2 class="bebas">&iquest;Quieres escribir<br><span class="red">tu propia historia?</span></h2>
+    <a href="https://wa.me/59177338339?text=Hola!%20Quiero%20empezar%20a%20entrenar%20en%20Knockout%20Training%20Center." target="_blank" class="btn-primary">Empieza hoy &rarr;</a>
   </section>
 
-  <!-- CTA FINAL -->
-  <section class="camp-cta reveal">
-    <div class="camp-cta-inner">
-      <p class="section-tag">Escribe tu historia</p>
-      <h2 class="bebas camp-cta-title">El pr&oacute;ximo campe&oacute;n<br><span class="red">podr&iacute;as ser t&uacute;</span></h2>
-      <p class="camp-cta-sub">Entr&eacute;nate con los mejores. Empieza hoy.</p>
-      <a href="https://wa.me/59177338339?text=Hola!%20Quiero%20empezar%20a%20entrenar%20en%20Knockout%20Training%20Center." target="_blank" class="btn-primary">
-        Empieza ahora &rarr;
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">KNOCK<span class="red">OUT</span></div>
         <div class="footer-brand-sub">Training Center</div>
-        <p>Donde nacen los verdaderos campeones.<br>Santa Cruz de la Sierra, Bolivia.</p>
+        <p>Donde nacen los verdaderos campeones.</p>
       </div>
       <div>
-        <p class="footer-col-title">Navegaci&oacute;n</p>
+        <p class="footer-col-title">P&aacute;ginas</p>
         <ul class="footer-links">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#disciplinas">Disciplinas</a></li>
-          <li><a href="index.html#precios">Precios</a></li>
           <li><a href="campeones.html">Campeones</a></li>
+          <li><a href="marcelo-salas.html">Marcelo Salas</a></li>
+          <li><a href="renzo-martinez.html">Renzo Mart&iacute;nez</a></li>
           <li><a href="index.html#contacto">Contacto</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-col-title">Contacto</p>
         <div class="footer-contact-items">
-          <a href="https://wa.me/59177338339">&#128241; +591 77338339</a>
-          <a href="https://www.facebook.com/knockoutbolivia" target="_blank">&#128280; knockoutbolivia</a>
-          <span>&#127942; Avalados por WAKO</span>
+          <a href="https://wa.me/59177338339">+591 77338339</a>
+          <a href="https://www.facebook.com/knockoutbolivia" target="_blank">knockoutbolivia</a>
+          <span>Avalados por WAKO</span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Knockout Training Center. Todos los derechos reservados.</p>
+      <p>&copy; 2026 Knockout Training Center.</p>
       <p>Disciplina &middot; Pasi&oacute;n &middot; Honor</p>
     </div>
     <div class="footer-dev">
-      <span class="footer-dev-text">Dise&ntilde;ado &amp; desarrollado por</span>
+      <span class="footer-dev-text">Desarrollado por</span>
       <span class="footer-dev-dot">&#9656;</span>
-      <a href="https://sebastian-delgado.netlify.app/" target="_blank" rel="noopener noreferrer" class="footer-dev-name">Sebasti&aacute;n Delgado</a>
-      <span class="footer-dev-dot">&middot;</span>
-      <span class="footer-dev-text">Desarrollador Web</span>
+      <a href="https://sebastian-delgado.netlify.app/" target="_blank" class="footer-dev-name">Sebasti&aacute;n Delgado</a>
     </div>
   </footer>
 
-  <a href="https://wa.me/59177338339" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <a href="https://wa.me/59177338339" target="_blank" class="wa-float">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
@@ -399,11 +177,8 @@
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
     function closeMenu() { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }), {threshold:0.1});
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
