@@ -135,12 +135,21 @@
 
 .ev-card:hover { background: #111; }
 
-.ev-card::before {
+.ev-card--past::before {
   content: '';
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 3px;
   background: #CC0000;
+  z-index: 1;
+}
+
+.ev-card--next::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #ff9900;
   z-index: 1;
 }
 
