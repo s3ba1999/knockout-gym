@@ -1,0 +1,430 @@
+/* ═══════════════════════════════════════════
+   EVENTOS.CSS — Knockout Training Center
+   ═══════════════════════════════════════════ */
+
+/* ─── Hero ─── */
+.ev-hero {
+  position: relative;
+  height: 65vh;
+  min-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.ev-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 30%;
+  transition: transform 8s ease;
+}
+
+.ev-hero:hover .ev-hero-bg { transform: scale(1.03); }
+
+.ev-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25) 0%,
+    rgba(0,0,0,0.45) 40%,
+    rgba(0,0,0,0.95) 100%
+  );
+}
+
+.ev-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 3rem 3.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ev-hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  letter-spacing: 0.05em;
+  line-height: 0.95;
+  margin: 0.5rem 0 1rem;
+}
+
+.ev-hero-sub {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* ─── Tabs ─── */
+.ev-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: #000;
+  position: sticky;
+  top: 70px;
+  z-index: 10;
+  padding: 0 3rem;
+}
+
+.ev-tab {
+  padding: 1.1rem 1.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #444;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  user-select: none;
+}
+
+.ev-tab:hover { color: #888; }
+.ev-tab.active { color: #fff; border-bottom-color: #CC0000; }
+
+/* ─── Secciones ─── */
+.ev-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem 3rem 5rem;
+}
+
+.ev-section-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.ev-section-label span {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #444;
+  white-space: nowrap;
+}
+
+.ev-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+/* ─── Grid de eventos ─── */
+.ev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* ─── Tarjeta de evento ─── */
+.ev-card {
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s;
+}
+
+.ev-card:hover { background: #111; }
+
+.ev-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #CC0000;
+  z-index: 1;
+}
+
+/* ─── Imagen / poster ─── */
+.ev-card-poster {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #0d0d0d;
+  position: relative;
+  overflow: hidden;
+}
+
+.ev-card-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ev-card:hover .ev-card-poster img { transform: scale(1.04); }
+
+/* ─── Badge de estado ─── */
+.ev-badge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  z-index: 2;
+}
+
+.ev-badge--past {
+  background: rgba(0,0,0,0.75);
+  color: #555;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+}
+
+.ev-badge--next {
+  background: #ff9900;
+  color: #000;
+}
+
+/* ─── Cuerpo de la tarjeta ─── */
+.ev-card-body {
+  padding: 1.5rem 1.75rem 1.75rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ev-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ev-card-date {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #CC0000;
+}
+
+.ev-card-location {
+  font-size: 0.62rem;
+  color: #3a3a3a;
+}
+
+.ev-card-meta-dot {
+  width: 3px;
+  height: 3px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ev-card-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.55rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s;
+}
+
+.ev-card:hover .ev-card-name { color: #ff4444; }
+
+.ev-card-subtitle {
+  font-size: 0.75rem;
+  color: #444;
+  margin-bottom: 1.25rem;
+  line-height: 1.55;
+}
+
+/* ─── Combates / info ─── */
+.ev-fights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+
+.ev-fight {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.045);
+  padding: 0.7rem 0.9rem;
+}
+
+.ev-fight-label {
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #CC0000;
+  margin-bottom: 0.35rem;
+}
+
+.ev-fight-matchup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #bbb;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+
+.ev-fight-vs {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.ev-fight-result {
+  margin-top: 0.35rem;
+  font-size: 0.65rem;
+  color: #444;
+  font-style: italic;
+}
+
+.ev-fight-result strong { color: #CC0000; font-style: normal; }
+
+/* ─── Footer de la tarjeta ─── */
+.ev-card-footer {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ev-card-discipline {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #2a2a2a;
+}
+
+.ev-card-ticket {
+  font-size: 0.6rem;
+  color: #3a3a3a;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Coming Soon (sección próximos vacía) ─── */
+.ev-coming-soon {
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 1px dashed rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.01);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ev-coming-soon-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.25;
+}
+
+.ev-coming-soon h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  color: #2a2a2a;
+  margin-bottom: 0.5rem;
+}
+
+.ev-coming-soon p {
+  color: #333;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.ev-coming-soon a {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: #CC0000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(204,0,0,0.3);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ev-coming-soon a:hover { color: #ff4444; border-color: #ff4444; }
+
+/* ─── CTA final ─── */
+.ev-cta {
+  background: #CC0000;
+  padding: 4.5rem 2rem;
+  text-align: center;
+}
+
+.ev-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.ev-cta p {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #fff;
+  color: #CC0000;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  transition: background 0.2s;
+}
+
+.btn-white:hover { background: #f0f0f0; }
+.btn-white svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+
+/* ─── Responsive tablet (≤ 1024px) ─── */
+@media (max-width: 1024px) {
+  .ev-grid { grid-template-columns: repeat(2, 1fr); }
+  .ev-section { padding: 2.5rem 2rem 4rem; }
+  .ev-tabs { padding: 0 2rem; }
+  .ev-hero-content { padding: 2rem 2rem 2.5rem; }
+}
+
+/* ─── Responsive móvil (≤ 700px) ─── */
+@media (max-width: 700px) {
+  .ev-hero { height: 55vh; min-height: 320px; }
+  .ev-hero-content { padding: 1.5rem 1.25rem 2rem; }
+  .ev-tabs { padding: 0 1.25rem; top: 60px; overflow-x: auto; scrollbar-width: none; }
+  .ev-tabs::-webkit-scrollbar { display: none; }
+  .ev-tab { padding: 0.9rem 1.25rem; white-space: nowrap; }
+  .ev-section { padding: 2rem 1.25rem 3.5rem; }
+  .ev-grid { grid-template-columns: 1fr; }
+  .ev-card-body { padding: 1.25rem 1.25rem 1.5rem 1.5rem; }
+  .ev-cta { padding: 3rem 1.25rem; }
+}

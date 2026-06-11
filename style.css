@@ -817,6 +817,134 @@ body {
 
 .btn-ghost:hover { border-color: #CC0000; background: rgba(204,0,0,0.05); }
 
+/* ─── Páginas Destacadas (teaser Campeones + Eventos) ─── */
+#paginas-destacadas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  min-height: 420px;
+}
+
+.pd-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  color: #fff;
+}
+
+.pd-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+}
+
+.pd-card:hover .pd-card-bg { transform: scale(1.06); }
+
+.pd-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.92) 0%,
+    rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.2) 100%
+  );
+  transition: background 0.4s;
+}
+
+.pd-card:hover .pd-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.88) 0%,
+    rgba(150,0,0,0.3) 60%,
+    rgba(0,0,0,0.25) 100%
+  );
+}
+
+.pd-card-overlay--eventos {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.95) 0%,
+    rgba(0,0,0,0.55) 50%,
+    rgba(0,0,0,0.25) 100%
+  );
+}
+
+.pd-card:hover .pd-card-overlay--eventos {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.9) 0%,
+    rgba(120,0,0,0.35) 60%,
+    rgba(0,0,0,0.25) 100%
+  );
+}
+
+/* Separador vertical entre las dos cards */
+#paginas-destacadas .pd-card:first-child {
+  border-right: 1px solid rgba(204,0,0,0.25);
+}
+
+.pd-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem 3rem;
+  width: 100%;
+}
+
+.pd-card-content .section-tag { display: block; }
+
+.pd-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.pd-card-desc {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.pd-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #CC0000;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(204,0,0,0.35);
+  padding-bottom: 3px;
+  transition: color 0.2s, border-color 0.2s, gap 0.2s;
+}
+
+.pd-card:hover .pd-card-cta {
+  color: #ff4444;
+  border-color: #ff4444;
+  gap: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  #paginas-destacadas {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .pd-card { min-height: 280px; }
+  #paginas-destacadas .pd-card:first-child {
+    border-right: none;
+    border-bottom: 1px solid rgba(204,0,0,0.25);
+  }
+  .pd-card-content { padding: 2rem 1.5rem; }
+}
+
 /* ─── Contacto ─── */
 #contacto {
   padding: 6rem 2rem;

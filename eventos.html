@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos & Combates | Knockout Training Center</title>
+  <meta name="description" content="Veladas de MMA y Kickboxing en Santa Cruz de la Sierra. Resultados, combates destacados y próximos eventos de Knockout Training Center." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="eventos.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">KNOCK<span>OUT</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#disciplinas">Disciplinas</a></li>
+      <li><a href="index.html#nosotros">Nosotros</a></li>
+      <li><a href="index.html#precios">Precios</a></li>
+      <li><a href="campeones.html" style="color:#CC0000;">Campeones</a></li>
+      <li><a href="eventos.html" style="color:#CC0000;">Eventos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscr&iacute;bete</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"             onclick="closeMenu()">Inicio</a>
+    <a href="index.html#disciplinas" onclick="closeMenu()">Disciplinas</a>
+    <a href="index.html#nosotros"    onclick="closeMenu()">Nosotros</a>
+    <a href="index.html#precios"     onclick="closeMenu()">Precios</a>
+    <a href="campeones.html"         onclick="closeMenu()" style="color:#CC0000;">Campeones</a>
+    <a href="eventos.html"           onclick="closeMenu()" style="color:#CC0000;">Eventos</a>
+    <a href="index.html#contacto"    onclick="closeMenu()">Contacto</a>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscr&iacute;bete ahora</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="ev-hero">
+    <div class="ev-hero-bg" style="background-image:url('img/648888811_1457408725751913_1342189154181205470_n.jpg'); background-position:center 30%;"></div>
+    <div class="ev-hero-overlay"></div>
+    <div class="ev-hero-content">
+      <span class="section-tag">Knockout Training Center</span>
+      <h1 class="ev-hero-title">Eventos<br><span class="red">&amp; Combates</span></h1>
+      <p class="ev-hero-sub">Veladas de MMA y Kickboxing en Santa Cruz de la Sierra &mdash; Resultados, combates y pr&oacute;ximas fechas.</p>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <div class="ev-tabs">
+    <div class="ev-tab" data-filter="past" onclick="filterEvents('past')">Pasados</div>
+    <div class="ev-tab active" data-filter="all" onclick="filterEvents('all')">Todos</div>
+    <div class="ev-tab" data-filter="next" onclick="filterEvents('next')">Pr&oacute;ximos</div>
+  </div>
+
+  <!-- PRÓXIMOS EVENTOS -->
+  <div class="ev-section ev-section--next" id="ev-proximos">
+    <div class="ev-section-label"><span>Pr&oacute;ximos eventos</span></div>
+    <div class="ev-coming-soon">
+      <div class="ev-coming-soon-icon">&#128197;</div>
+      <h3>Pr&oacute;ximamente</h3>
+      <p>Los pr&oacute;ximos eventos ser&aacute;n anunciados en nuestras redes sociales.</p>
+      <a href="https://www.facebook.com/knockoutbolivia" target="_blank">Seguirnos en Facebook &rarr;</a>
+    </div>
+  </div>
+
+  <!-- EVENTOS PASADOS -->
+  <div class="ev-section ev-section--past" id="ev-pasados">
+    <div class="ev-section-label"><span>Eventos pasados</span></div>
+    <div class="ev-grid">
+
+      <!-- 1. Training Camp K-1 + Copa WAKO 2026 — Mayo 2026 -->
+      <article class="ev-card ev-card--past reveal">
+        <div class="ev-card-poster">
+          <img src="img/eventos/679876921_1494836358675816_1981500639284967674_n.jpg"
+               alt="Training Camp K-1 + Copa WAKO 2026" loading="lazy" />
+          <span class="ev-badge ev-badge--past">Realizado</span>
+        </div>
+        <div class="ev-card-body">
+          <div class="ev-card-meta">
+            <span class="ev-card-date">14 &ndash; 17 Mayo 2026</span>
+            <span class="ev-card-meta-dot"></span>
+            <span class="ev-card-location">&#128205; Knockout Training Center</span>
+          </div>
+          <h2 class="ev-card-name">Training Camp<br><span class="red">K-1 &amp; Copa WAKO 2026</span></h2>
+          <p class="ev-card-subtitle">
+            Training Camp con Leyendas del K-1 &middot; Copa WAKO 2026 &mdash; Selectiva Panamericano.
+          </p>
+          <div class="ev-fights">
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#127941; Training Camp &mdash; 14, 15 y 17 de Mayo</div>
+              <div class="ev-fight-matchup">Cl&aacute;udio Feitosa &middot; Francisco Filho &middot; Emmanuel Ruarte</div>
+              <div class="ev-fight-result">Leyendas del K-1 como instructores</div>
+            </div>
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#127942; Copa WAKO Bolivia 2026 &mdash; S&aacute;b 16 de Mayo</div>
+              <div class="ev-fight-matchup">Selectiva Panamericano WAKO</div>
+            </div>
+          </div>
+          <div class="ev-card-footer">
+            <span class="ev-card-discipline">Kickboxing &middot; WAKO Bolivia</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Champion 25 — 21 Ago 2025 -->
+      <article class="ev-card ev-card--past reveal stagger-1">
+        <div class="ev-card-poster">
+          <img src="img/eventos/718112455_1532372581588860_1246965115449748102_n.jpg"
+               alt="Champion 25 – La Pelea del Año" loading="lazy" />
+          <span class="ev-badge ev-badge--past">Realizado</span>
+        </div>
+        <div class="ev-card-body">
+          <div class="ev-card-meta">
+            <span class="ev-card-date">21 de Agosto 2025</span>
+            <span class="ev-card-meta-dot"></span>
+            <span class="ev-card-location">&#128205; Coliseo &ldquo;Los Fabriles&rdquo;</span>
+          </div>
+          <h2 class="ev-card-name">Champion<span class="red"> 25</span></h2>
+          <p class="ev-card-subtitle">&ldquo;La Pelea del A&ntilde;o&rdquo; &mdash; 21 de Agosto, 19:30 Hrs. Organiza: PSP.</p>
+          <div class="ev-fights">
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#11088; Pelea estelar</div>
+              <div class="ev-fight-matchup">
+                <span>Medina</span>
+                <span class="ev-fight-vs">VS</span>
+                <span>Bazan</span>
+              </div>
+            </div>
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#11088; Co-estelar</div>
+              <div class="ev-fight-matchup">
+                <span>Mart&iacute;nez</span>
+                <span class="ev-fight-vs">VS</span>
+                <span>Orozco</span>
+              </div>
+            </div>
+          </div>
+          <div class="ev-card-footer">
+            <span class="ev-card-discipline">MMA &middot; Kickboxing</span>
+            <span class="ev-card-ticket">VIP 150 Bs &middot; Gral. 100 Bs</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Noche de Campeones 11 — 17 Abr 2025 -->
+      <article class="ev-card ev-card--past reveal stagger-2">
+        <div class="ev-card-poster">
+          <img src="img/eventos/662874925_1481312896694829_8108860540930118770_n.jpg"
+               alt="Noche de Campeones 11ª Edición" loading="lazy" />
+          <span class="ev-badge ev-badge--past">Realizado</span>
+        </div>
+        <div class="ev-card-body">
+          <div class="ev-card-meta">
+            <span class="ev-card-date">17 de Abril 2025</span>
+            <span class="ev-card-meta-dot"></span>
+            <span class="ev-card-location">&#128205; KO Training Center &mdash; Mia Plaza</span>
+          </div>
+          <h2 class="ev-card-name">Noche de <span class="red">Campeones</span><br><small style="font-size:0.55em;color:#666;letter-spacing:0.08em;">11&ordf; Edici&oacute;n Especial</small></h2>
+          <p class="ev-card-subtitle">19:30 Hrs. Entradas: Gral. 80 Bs &middot; Mesa VIP 1.500 Bs (10 personas).</p>
+          <div class="ev-fights">
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#11088; Combate estelar</div>
+              <div class="ev-fight-matchup">
+                <span>Alaca</span>
+                <span class="ev-fight-vs">VS</span>
+                <span>Mart&iacute;nez</span>
+              </div>
+            </div>
+            <div class="ev-fight">
+              <div class="ev-fight-label">Cartelera</div>
+              <div class="ev-fight-matchup">Cu&eacute;llar vs Limpias &middot; Candia vs Hinojosa</div>
+            </div>
+          </div>
+          <div class="ev-card-footer">
+            <span class="ev-card-discipline">Kickboxing &middot; MMA &middot; PSP</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Noche de Campeones 10 — 06 Mar 2025 -->
+      <article class="ev-card ev-card--past reveal stagger-3">
+        <div class="ev-card-poster">
+          <img src="img/eventos/647004179_1456677825825003_6130455083896832686_n.jpg"
+               alt="Noche de Campeones 10ª Edición" loading="lazy" />
+          <span class="ev-badge ev-badge--past">Realizado</span>
+        </div>
+        <div class="ev-card-body">
+          <div class="ev-card-meta">
+            <span class="ev-card-date">6 de Marzo 2025</span>
+            <span class="ev-card-meta-dot"></span>
+            <span class="ev-card-location">&#128205; Coliseo Km. 9 &mdash; La Guardia</span>
+          </div>
+          <h2 class="ev-card-name">Noche de <span class="red">Campeones</span><br><small style="font-size:0.55em;color:#666;letter-spacing:0.08em;">10&ordf; Edici&oacute;n Especial</small></h2>
+          <p class="ev-card-subtitle">Coliseo Municipal Km. 9, Doble V&iacute;a La Guardia. 19:30 Hrs.</p>
+          <div class="ev-fights">
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#11088; Combate estelar &#127463;&#127476; vs &#127463;&#127479;</div>
+              <div class="ev-fight-matchup">
+                <span>Mart&iacute;nez</span>
+                <span class="ev-fight-vs">VS</span>
+                <span>Flavio</span>
+              </div>
+            </div>
+            <div class="ev-fight">
+              <div class="ev-fight-label">Cartelera &#127463;&#127476; vs &#127463;&#127479;</div>
+              <div class="ev-fight-matchup">Boyka vs Maia &middot; Liquen vs &Aacute;lvarez</div>
+            </div>
+          </div>
+          <div class="ev-card-footer">
+            <span class="ev-card-discipline">Kickboxing &middot; MMA &middot; PSP</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Training Camp Kick Boxing / Boxeo — 30-31 Ene 2025 -->
+      <article class="ev-card ev-card--past reveal stagger-4">
+        <div class="ev-card-poster">
+          <img src="img/eventos/624755462_1428489345310518_6545717004373016863_n.jpg"
+               alt="Training Camp Kick Boxing – Boxeo" loading="lazy" />
+          <span class="ev-badge ev-badge--past">Realizado</span>
+        </div>
+        <div class="ev-card-body">
+          <div class="ev-card-meta">
+            <span class="ev-card-date">30 &ndash; 31 Enero 2025</span>
+            <span class="ev-card-meta-dot"></span>
+            <span class="ev-card-location">&#128205; Knockout Training Center</span>
+          </div>
+          <h2 class="ev-card-name">Training Camp<br><span class="red">Kickboxing &amp; Boxeo</span></h2>
+          <p class="ev-card-subtitle">Viernes 30 y S&aacute;bado 31 de Enero. Avalado por WAKO Bolivia.</p>
+          <div class="ev-fights">
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#127941; Instructores</div>
+              <div class="ev-fight-matchup" style="flex-wrap:wrap;gap:0.4rem;">
+                Marcelo Salas &middot; Jos&eacute; M. Castedo &middot; Carlos Banasco &middot; Pierre Salas &middot; Renzo Mart&iacute;nez &middot; Jos&iacute;as N&uacute;&ntilde;ez &middot; Mario Marmai
+              </div>
+            </div>
+          </div>
+          <div class="ev-card-footer">
+            <span class="ev-card-discipline">Kickboxing &middot; Boxeo &middot; WAKO Bolivia</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Copa Knockout II — 19 Dic 2024 -->
+      <article class="ev-card ev-card--past reveal stagger-5">
+        <div class="ev-card-poster">
+          <img src="img/eventos/603028848_1397342741758512_6306951573493857084_n.jpg"
+               alt="Copa Knockout II – Martínez vs Labra" loading="lazy" />
+          <span class="ev-badge ev-badge--past">Realizado</span>
+        </div>
+        <div class="ev-card-body">
+          <div class="ev-card-meta">
+            <span class="ev-card-date">19 de Diciembre 2024</span>
+            <span class="ev-card-meta-dot"></span>
+            <span class="ev-card-location">&#128205; Santa Cruz, Bolivia</span>
+          </div>
+          <h2 class="ev-card-name">Copa <span class="red">Knockout II</span></h2>
+          <p class="ev-card-subtitle">19:30 Hrs. Entradas: Lounge 2.000 Bs (mesa 10 personas) &middot; General 80 Bs.</p>
+          <div class="ev-fights">
+            <div class="ev-fight">
+              <div class="ev-fight-label">&#11088; Pelea estelar &#127463;&#127476; vs &#127464;&#127473;</div>
+              <div class="ev-fight-matchup">
+                <span>Mart&iacute;nez</span>
+                <span class="ev-fight-vs">VS</span>
+                <span>Labra</span>
+              </div>
+            </div>
+            <div class="ev-fight">
+              <div class="ev-fight-label">Cartelera</div>
+              <div class="ev-fight-matchup" style="flex-wrap:wrap;line-height:1.8;">
+                Zuleta vs Escalante &middot; &Aacute;lvarez vs Romero &middot; Negrete vs Bol&iacute;var &middot; Rojas vs Serrudo &middot; Boyka vs Tomicha &middot; Roman vs Ramos
+              </div>
+            </div>
+          </div>
+          <div class="ev-card-footer">
+            <span class="ev-card-discipline">Kickboxing &middot; PSP</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="ev-cta">
+    <h2>&iquest;Quer&eacute;s ser el pr&oacute;ximo <span style="color:#ffaaaa;">campe&oacute;n?</span></h2>
+    <p>Entren&aacute; con los mejores de Bolivia. Cont&aacute;ctanos por WhatsApp para tu clase de prueba gratuita.</p>
+    <a href="https://wa.me/59177338339?text=Hola!%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Knockout%20Training%20Center"
+       target="_blank" class="btn-white">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Contactar por WhatsApp
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">KNOCK<span class="red">OUT</span></div>
+        <div class="footer-brand-sub">Training Center</div>
+        <p>Donde nacen los verdaderos campeones.<br>Santa Cruz de la Sierra, Bolivia.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navegaci&oacute;n</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#disciplinas">Disciplinas</a></li>
+          <li><a href="index.html#precios">Precios</a></li>
+          <li><a href="campeones.html">Campeones</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contacto</p>
+        <div class="footer-contact-items">
+          <a href="https://wa.me/59177338339">&#128241; +591 77338339</a>
+          <a href="https://www.facebook.com/knockoutbolivia" target="_blank">&#128280; knockoutbolivia</a>
+          <span>&#127942; Avalados por WAKO</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Knockout Training Center. Todos los derechos reservados.</p>
+      <p>Disciplina &middot; Pasi&oacute;n &middot; Honor</p>
+    </div>
+    <div class="footer-dev">
+      <span class="footer-dev-text">Dise&ntilde;ado &amp; desarrollado por</span>
+      <span class="footer-dev-dot">&#9656;</span>
+      <a href="https://sebastian-delgado.netlify.app/" target="_blank" rel="noopener noreferrer" class="footer-dev-name">Sebasti&aacute;n Delgado</a>
+      <span class="footer-dev-dot">&middot;</span>
+      <span class="footer-dev-text">Desarrollador Web</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/59177338339?text=Hola!%20Me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20las%20clases%20en%20Knockout%20Training%20Center"
+     target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    /* ── Navbar scroll ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ── Mobile menu ── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    /* ── Scroll reveal ── */
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    /* ── Filtro de tabs ── */
+    function filterEvents(type) {
+      document.querySelectorAll('.ev-tab').forEach(t => t.classList.remove('active'));
+      document.querySelector('[data-filter="' + type + '"]').classList.add('active');
+      const proximos = document.getElementById('ev-proximos');
+      const pasados  = document.getElementById('ev-pasados');
+      if (type === 'all') {
+        proximos.style.display = 'block';
+        pasados.style.display  = 'block';
+      } else if (type === 'next') {
+        proximos.style.display = 'block';
+        pasados.style.display  = 'none';
+      } else {
+        proximos.style.display = 'none';
+        pasados.style.display  = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
