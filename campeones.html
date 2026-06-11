@@ -7,30 +7,45 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="campeon.css" />
+  <link rel="stylesheet" href="i18n.css" />
 </head>
 <body>
 
   <nav id="navbar">
     <a href="index.html" class="nav-logo">KNOCK<span>OUT</span></a>
     <ul class="nav-links">
-      <li><a href="index.html#disciplinas">Disciplinas</a></li>
-      <li><a href="index.html#nosotros">Nosotros</a></li>
-      <li><a href="index.html#precios">Precios</a></li>
-      <li><a href="campeones.html" style="color:#CC0000;">Campeones</a></li>
-      <li><a href="eventos.html" style="color:#CC0000;">Eventos</a></li>
-      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="index.html#disciplinas" data-i18n="nav.disciplinas">Disciplinas</a></li>
+      <li><a href="index.html#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
+      <li><a href="index.html#precios" data-i18n="nav.precios">Precios</a></li>
+      <li><a href="campeones.html" style="color:#CC0000;" data-i18n="nav.campeones">Campeones</a></li>
+      <li><a href="eventos.html" style="color:#CC0000;" data-i18n="nav.eventos">Eventos</a></li>
+      <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
     </ul>
-    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscr&iacute;bete</a>
+    <div class="lang-switcher">
+      <span class="lang-btn active" data-lang="es" onclick="setLanguage('es')">ES</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</span>
+    </div>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta" data-i18n="nav.cta">Inscr&iacute;bete</a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"             onclick="closeMenu()">Inicio</a>
-    <a href="index.html#disciplinas" onclick="closeMenu()">Disciplinas</a>
-    <a href="index.html#nosotros"    onclick="closeMenu()">Nosotros</a>
-    <a href="index.html#precios"     onclick="closeMenu()">Precios</a>
-    <a href="campeones.html"         onclick="closeMenu()" style="color:#CC0000;">Campeones</a>
-    <a href="eventos.html"           onclick="closeMenu()" style="color:#CC0000;">Eventos</a>
-    <a href="index.html#contacto"    onclick="closeMenu()">Contacto</a>
+    <a href="index.html"             onclick="closeMenu()" data-i18n="nav.inicio">Inicio</a>
+    <a href="index.html#disciplinas" onclick="closeMenu()" data-i18n="nav.disciplinas">Disciplinas</a>
+    <a href="index.html#nosotros"    onclick="closeMenu()" data-i18n="nav.nosotros">Nosotros</a>
+    <a href="index.html#precios"     onclick="closeMenu()" data-i18n="nav.precios">Precios</a>
+    <a href="campeones.html"         onclick="closeMenu()" style="color:#CC0000;" data-i18n="nav.campeones">Campeones</a>
+    <a href="eventos.html"           onclick="closeMenu()" style="color:#CC0000;" data-i18n="nav.eventos">Eventos</a>
+    <a href="index.html#contacto"    onclick="closeMenu()" data-i18n="nav.contacto">Contacto</a>
+    <div class="lang-switcher" style="margin:0.5rem auto;">
+      <span class="lang-btn active" data-lang="es" onclick="setLanguage('es');closeMenu()">ES</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="en" onclick="setLanguage('en');closeMenu()">EN</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="pt" onclick="setLanguage('pt');closeMenu()">PT</span>
+    </div>
   </div>
 
   <!-- HERO -->
@@ -38,9 +53,9 @@
     <div class="gc-hero-bg" style="background-image:url('img/hero4.jpg');"></div>
     <div class="gc-hero-overlay"></div>
     <div class="gc-hero-content">
-      <span class="section-tag">Knockout Training Center</span>
-      <h1 class="bebas gc-hero-title">Nuestros<br><span class="red">Campeones</span></h1>
-      <p class="gc-hero-sub">Historias forjadas con sudor, disciplina y sacrificio.</p>
+      <span class="section-tag" data-i18n="gc.tag">Knockout Training Center</span>
+      <h1 class="bebas gc-hero-title" data-i18n="gc.title">Nuestros<br><span class="red">Campeones</span></h1>
+      <p class="gc-hero-sub" data-i18n="gc.sub">Historias forjadas con sudor, disciplina y sacrificio.</p>
     </div>
     <div class="gc-hero-arrow">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -182,5 +197,6 @@
     const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }), {threshold:0.1});
     document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => obs.observe(el));
   </script>
+  <script src="i18n.js"></script>
 </body>
 </html>

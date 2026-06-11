@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="i18n.css" />
 </head>
 <body>
 
@@ -18,31 +19,45 @@
   <nav id="navbar">
     <a href="#inicio" class="nav-logo">KNOCK<span>OUT</span></a>
     <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#disciplinas">Disciplinas</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#precios">Precios</a></li>
-      <li><a href="#galeria">Galer&iacute;a</a></li>
-      <li><a href="campeones.html" style="color:#CC0000;">Campeones</a></li>
-      <li><a href="eventos.html" style="color:#CC0000;">Eventos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+      <li><a href="#disciplinas" data-i18n="nav.disciplinas">Disciplinas</a></li>
+      <li><a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
+      <li><a href="#precios" data-i18n="nav.precios">Precios</a></li>
+      <li><a href="#galeria" data-i18n="nav.galeria">Galer&iacute;a</a></li>
+      <li><a href="campeones.html" style="color:#CC0000;" data-i18n="nav.campeones">Campeones</a></li>
+      <li><a href="eventos.html" style="color:#CC0000;" data-i18n="nav.eventos">Eventos</a></li>
+      <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
     </ul>
-    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscribete</a>
+    <div class="lang-switcher">
+      <span class="lang-btn active" data-lang="es" onclick="setLanguage('es')">ES</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</span>
+    </div>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta" data-i18n="nav.cta">Inscribete</a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#inicio"      onclick="closeMenu()">Inicio</a>
-    <a href="#disciplinas" onclick="closeMenu()">Disciplinas</a>
-    <a href="#nosotros"    onclick="closeMenu()">Nosotros</a>
-    <a href="#precios"     onclick="closeMenu()">Precios</a>
-    <a href="#galeria"       onclick="closeMenu()">Galer&iacute;a</a>
-    <a href="campeones.html" onclick="closeMenu()" style="color:#CC0000;">Campeones</a>
-    <a href="eventos.html"   onclick="closeMenu()" style="color:#CC0000;">Eventos</a>
-    <a href="#contacto"      onclick="closeMenu()">Contacto</a>
-    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscribete ahora</a>
+    <a href="#inicio"      onclick="closeMenu()" data-i18n="nav.inicio">Inicio</a>
+    <a href="#disciplinas" onclick="closeMenu()" data-i18n="nav.disciplinas">Disciplinas</a>
+    <a href="#nosotros"    onclick="closeMenu()" data-i18n="nav.nosotros">Nosotros</a>
+    <a href="#precios"     onclick="closeMenu()" data-i18n="nav.precios">Precios</a>
+    <a href="#galeria"       onclick="closeMenu()" data-i18n="nav.galeria">Galer&iacute;a</a>
+    <a href="campeones.html" onclick="closeMenu()" style="color:#CC0000;" data-i18n="nav.campeones">Campeones</a>
+    <a href="eventos.html"   onclick="closeMenu()" style="color:#CC0000;" data-i18n="nav.eventos">Eventos</a>
+    <a href="#contacto"      onclick="closeMenu()" data-i18n="nav.contacto">Contacto</a>
+    <div class="lang-switcher" style="margin:0.5rem auto;">
+      <span class="lang-btn active" data-lang="es" onclick="setLanguage('es');closeMenu()">ES</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="en" onclick="setLanguage('en');closeMenu()">EN</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="pt" onclick="setLanguage('pt');closeMenu()">PT</span>
+    </div>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta" data-i18n="nav.cta.mobile">Inscribete ahora</a>
   </div>
 
   <!-- HERO -->
@@ -64,14 +79,14 @@
     <div class="hero-lines"><span></span><span></span><span></span></div>
 
     <div class="hero-content">
-      <div class="hero-badge">Avalado por WAKO &middot; Santa Cruz, Bolivia</div>
+      <div class="hero-badge" data-i18n="hero.badge">Avalado por WAKO &middot; Santa Cruz, Bolivia</div>
       <h1 class="hero-title" data-text="KNOCKOUT">KNOCK<span class="red">OUT</span></h1>
-      <p class="hero-subtitle">Training Center</p>
-      <p class="hero-slogan">"Donde nacen los verdaderos campeones"</p>
-      <p class="hero-valores">Disciplina &nbsp;&middot;&nbsp; Pasion &nbsp;&middot;&nbsp; Honor</p>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Training Center</p>
+      <p class="hero-slogan" data-i18n="hero.slogan">"Donde nacen los verdaderos campeones"</p>
+      <p class="hero-valores" data-i18n="hero.valores">Disciplina &nbsp;&middot;&nbsp; Pasion &nbsp;&middot;&nbsp; Honor</p>
       <div class="hero-btns">
-        <a href="https://wa.me/59177338339" target="_blank" class="btn-primary">Empieza hoy</a>
-        <a href="#disciplinas" class="btn-outline">Ver disciplinas</a>
+        <a href="https://wa.me/59177338339" target="_blank" class="btn-primary" data-i18n="hero.btn1">Empieza hoy</a>
+        <a href="#disciplinas" class="btn-outline" data-i18n="hero.btn2">Ver disciplinas</a>
       </div>
     </div>
 
@@ -86,82 +101,82 @@
     <div class="bg-pattern"></div>
 
     <div class="section-header reveal" style="position:relative;z-index:1;">
-      <span class="section-tag">Lo que ofrecemos</span>
-      <h2 class="section-title">Nuestras <span class="red">Disciplinas</span></h2>
+      <span class="section-tag" data-i18n="dis.tag">Lo que ofrecemos</span>
+      <h2 class="section-title" data-i18n="dis.title">Nuestras <span class="red">Disciplinas</span></h2>
       <div class="divider"></div>
-      <p class="desc">M&aacute;s de 7 disciplinas de artes marciales y fitness para todos los niveles y edades.</p>
+      <p class="desc" data-i18n="dis.desc">M&aacute;s de 7 disciplinas de artes marciales y fitness para todos los niveles y edades.</p>
     </div>
 
     <div class="disciplinas-grid">
       <div class="disciplina-card card-boxeo reveal stagger-1">
         <div class="card-content">
           <div class="card-num">01</div>
-          <h3 class="card-name">Boxeo</h3>
+          <h3 class="card-name" data-i18n="dis.boxeo.name">Boxeo</h3>
           <div class="card-bar"></div>
-          <p class="card-desc">T&eacute;cnica, potencia y velocidad. Entrenamiento completo para todos los niveles.</p>
-          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Boxeo%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn">Me interesa &rarr;</a>
+          <p class="card-desc" data-i18n="dis.boxeo.desc">T&eacute;cnica, potencia y velocidad. Entrenamiento completo para todos los niveles.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Boxeo%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn" data-i18n="dis.card.btn">Me interesa &rarr;</a>
         </div>
       </div>
       <div class="disciplina-card card-kickboxing reveal stagger-2">
         <div class="card-content">
           <div class="card-num">02</div>
-          <h3 class="card-name">Kickboxing</h3>
+          <h3 class="card-name" data-i18n="dis.kickboxing.name">Kickboxing</h3>
           <div class="card-bar"></div>
-          <p class="card-desc">Arte marcial de alto impacto. Pu&ntilde;os y patadas con rigor competitivo y t&eacute;cnico.</p>
-          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Kickboxing%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn">Me interesa &rarr;</a>
+          <p class="card-desc" data-i18n="dis.kickboxing.desc">Arte marcial de alto impacto. Pu&ntilde;os y patadas con rigor competitivo y t&eacute;cnico.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Kickboxing%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn" data-i18n="dis.card.btn">Me interesa &rarr;</a>
         </div>
       </div>
       <div class="disciplina-card card-jiujitsu reveal stagger-3">
         <div class="card-content">
           <div class="card-num">03</div>
-          <h3 class="card-name">Jiu-Jitsu</h3>
+          <h3 class="card-name" data-i18n="dis.jiujitsu.name">Jiu-Jitsu</h3>
           <div class="card-bar"></div>
-          <p class="card-desc">Arte marcial de suelo y sumisi&oacute;n. Grappling y defensa personal de &eacute;lite.</p>
-          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Jiu-Jitsu%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn">Me interesa &rarr;</a>
+          <p class="card-desc" data-i18n="dis.jiujitsu.desc">Arte marcial de suelo y sumisi&oacute;n. Grappling y defensa personal de &eacute;lite.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Jiu-Jitsu%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn" data-i18n="dis.card.btn">Me interesa &rarr;</a>
         </div>
       </div>
       <div class="disciplina-card card-mma reveal stagger-4">
         <div class="card-content">
           <div class="card-num">04</div>
-          <h3 class="card-name">MMA</h3>
+          <h3 class="card-name" data-i18n="dis.mma.name">MMA</h3>
           <div class="card-bar"></div>
-          <p class="card-desc">Artes marciales mixtas. Combina striking, grappling y lucha en una sola disciplina.</p>
-          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20MMA%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn">Me interesa &rarr;</a>
+          <p class="card-desc" data-i18n="dis.mma.desc">Artes marciales mixtas. Combina striking, grappling y lucha en una sola disciplina.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20MMA%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn" data-i18n="dis.card.btn">Me interesa &rarr;</a>
         </div>
       </div>
       <div class="disciplina-card card-crossfit reveal stagger-5">
         <div class="card-content">
           <div class="card-num">05</div>
-          <h3 class="card-name">Crossfit</h3>
+          <h3 class="card-name" data-i18n="dis.crossfit.name">Crossfit</h3>
           <div class="card-bar"></div>
-          <p class="card-desc">Entrenamiento funcional de alta intensidad. Fuerza, resistencia y agilidad.</p>
-          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Crossfit%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn">Me interesa &rarr;</a>
+          <p class="card-desc" data-i18n="dis.crossfit.desc">Entrenamiento funcional de alta intensidad. Fuerza, resistencia y agilidad.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Crossfit%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn" data-i18n="dis.card.btn">Me interesa &rarr;</a>
         </div>
       </div>
       <div class="disciplina-card card-boxhit reveal stagger-6">
         <div class="card-content">
           <div class="card-num">06</div>
-          <h3 class="card-name">Boxhit</h3>
+          <h3 class="card-name" data-i18n="dis.boxhit.name">Boxhit</h3>
           <div class="card-bar"></div>
-          <p class="card-desc">Clases grupales de boxeo funcional. Quema calor&iacute;as y mejora tu condici&oacute;n f&iacute;sica.</p>
-          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Boxhit%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn">Me interesa &rarr;</a>
+          <p class="card-desc" data-i18n="dis.boxhit.desc">Clases grupales de boxeo funcional. Quema calor&iacute;as y mejora tu condici&oacute;n f&iacute;sica.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20inscribirme%20en%20Boxhit%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn" data-i18n="dis.card.btn">Me interesa &rarr;</a>
         </div>
       </div>
       <div class="disciplina-card card-gym reveal stagger-7">
         <div class="card-content">
           <div class="card-num">07</div>
-          <h3 class="card-name">Gym &amp; M&aacute;quinas</h3>
+          <h3 class="card-name" data-i18n="dis.gym.name">Gym &amp; M&aacute;quinas</h3>
           <div class="card-bar"></div>
-          <p class="card-desc">Zona de musculaci&oacute;n equipada. M&aacute;quinas modernas para complementar tu entrenamiento.</p>
-          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20el%20Gym%20%26%20M%C3%A1quinas%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn">Me interesa &rarr;</a>
+          <p class="card-desc" data-i18n="dis.gym.desc">Zona de musculaci&oacute;n equipada. M&aacute;quinas modernas para complementar tu entrenamiento.</p>
+          <a href="https://wa.me/59177338339?text=Hola!%20Me%20interesa%20el%20Gym%20%26%20M%C3%A1quinas%20en%20Knockout%20Training%20Center.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="card-wa-btn" data-i18n="dis.card.btn">Me interesa &rarr;</a>
         </div>
       </div>
       <div class="card-cta reveal stagger-8">
         <div>
-          <p class="card-cta-title">&iquest;No sabes cu&aacute;l elegir?</p>
-          <p>Escr&iacute;benos y te asesoramos sin compromiso.</p>
+          <p class="card-cta-title" data-i18n="dis.cta.question">&iquest;No sabes cu&aacute;l elegir?</p>
+          <p data-i18n="dis.cta.text">Escr&iacute;benos y te asesoramos sin compromiso.</p>
         </div>
-        <a href="https://wa.me/59177338339?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20disciplinas%20en%20Knockout%20Training%20Center." target="_blank">CONSULTAR &rarr;</a>
+        <a href="https://wa.me/59177338339?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20disciplinas%20en%20Knockout%20Training%20Center." target="_blank" data-i18n="dis.cta.btn">CONSULTAR &rarr;</a>
       </div>
     </div>
   </section>
@@ -173,46 +188,46 @@
       <div class="team-photo-overlay"></div>
       <div class="team-photo-overlay-left"></div>
       <div class="team-photo-text reveal-left">
-        <span class="section-tag">Familia Knockout</span>
-        <h2>Para todos.<br><span class="red">Sin excepcion.</span></h2>
+        <span class="section-tag" data-i18n="nos.family.tag">Familia Knockout</span>
+        <h2 data-i18n="nos.family.title">Para todos.<br><span class="red">Sin excepcion.</span></h2>
       </div>
     </div>
 
     <div class="stats-bar">
       <div class="stat-item reveal stagger-1">
         <div class="stat-value" data-target="10" data-suffix="+">10+</div>
-        <div class="stat-label">Anos de experiencia</div>
+        <div class="stat-label" data-i18n="nos.stat1.label">Anos de experiencia</div>
       </div>
       <div class="stat-item reveal stagger-2">
         <div class="stat-value" data-target="7">7</div>
-        <div class="stat-label">Disciplinas</div>
+        <div class="stat-label" data-i18n="nos.stat2.label">Disciplinas</div>
       </div>
       <div class="stat-item reveal stagger-3">
         <div class="stat-value" data-target="500" data-suffix="+">500+</div>
-        <div class="stat-label">Alumnos activos</div>
+        <div class="stat-label" data-i18n="nos.stat3.label">Alumnos activos</div>
       </div>
       <div class="stat-item reveal stagger-4">
         <div class="stat-value">WAKO</div>
-        <div class="stat-label">Reconocimiento oficial</div>
+        <div class="stat-label" data-i18n="nos.stat4.label">Reconocimiento oficial</div>
       </div>
     </div>
 
     <div class="nosotros-content">
       <div class="nosotros-text reveal-left">
-        <span class="section-tag">Qui&eacute;nes somos</span>
-        <h2 class="section-title" style="text-align:left;">
+        <span class="section-tag" data-i18n="nos.who.tag">Qui&eacute;nes somos</span>
+        <h2 class="section-title" style="text-align:left;" data-i18n="nos.who.title">
           Entrenados por<br><span class="red">Campeones Mundiales</span>
         </h2>
         <div class="divider left"></div>
-        <p>Knock Out Training Center es el centro de artes marciales mas completo de Santa Cruz de la Sierra.
+        <p data-i18n="nos.p1">Knock Out Training Center es el centro de artes marciales mas completo de Santa Cruz de la Sierra.
           Fundado por <strong>Marcelo Salas</strong>, Mundialista de Kickboxing, nuestro equipo de instructores
           de clase mundial forma campeones dentro y fuera del tatami.</p>
-        <p>Somos un gimnasio familiar que recibe desde los m&aacute;s peque&ntilde;os hasta adultos mayores.
+        <p data-i18n="nos.p2">Somos un gimnasio familiar que recibe desde los m&aacute;s peque&ntilde;os hasta adultos mayores.
           Avalados por <strong>WAKO</strong> (World Association of Kickboxing Organizations),
           ofrecemos el mas alto nivel de entrenamiento en Bolivia.</p>
         <div class="instructor-tag" style="margin-top:1.5rem;">
           <div class="name">Marcelo Salas</div>
-          <div class="role">Director &middot; Mundialista de Kickboxing</div>
+          <div class="role" data-i18n="nos.instructor.role">Director &middot; Mundialista de Kickboxing</div>
         </div>
       </div>
       <div class="photo-grid reveal-right">
@@ -233,10 +248,10 @@
       <div class="pd-card-bg" style="background-image:url('img/hero6.jpg'); background-position:center 20%;"></div>
       <div class="pd-card-overlay"></div>
       <div class="pd-card-content reveal-left">
-        <span class="section-tag">Orgullo boliviano</span>
-        <h2 class="pd-card-title">Nuestros<br><span class="red">Campeones</span></h2>
-        <p class="pd-card-desc">Marcelo Salas, Mundialista WAKO &middot; Renzo &ldquo;El Rayo&rdquo; Mart&iacute;nez, Campe&oacute;n WGP Latin American.</p>
-        <span class="pd-card-cta">Conocer su historia &rarr;</span>
+        <span class="section-tag" data-i18n="teaser.champ.tag">Orgullo boliviano</span>
+        <h2 class="pd-card-title" data-i18n="teaser.champ.title">Nuestros<br><span class="red">Campeones</span></h2>
+        <p class="pd-card-desc" data-i18n="teaser.champ.desc">Marcelo Salas, Mundialista WAKO &middot; Renzo &ldquo;El Rayo&rdquo; Mart&iacute;nez, Campe&oacute;n WGP Latin American.</p>
+        <span class="pd-card-cta" data-i18n="teaser.champ.cta">Conocer su historia &rarr;</span>
       </div>
     </a>
 
@@ -244,10 +259,10 @@
       <div class="pd-card-bg" style="background-image:url('img/hero.jpg'); background-position:center 40%;"></div>
       <div class="pd-card-overlay pd-card-overlay--eventos"></div>
       <div class="pd-card-content reveal-right">
-        <span class="section-tag">En el ring</span>
-        <h2 class="pd-card-title">Eventos<br><span class="red">&amp; Combates</span></h2>
-        <p class="pd-card-desc">Veladas de MMA y Kickboxing &middot; Resultados &middot; Pr&oacute;ximas fechas en Santa Cruz.</p>
-        <span class="pd-card-cta">Ver todos los eventos &rarr;</span>
+        <span class="section-tag" data-i18n="teaser.ev.tag">En el ring</span>
+        <h2 class="pd-card-title" data-i18n="teaser.ev.title">Eventos<br><span class="red">&amp; Combates</span></h2>
+        <p class="pd-card-desc" data-i18n="teaser.ev.desc">Veladas de MMA y Kickboxing &middot; Resultados &middot; Pr&oacute;ximas fechas en Santa Cruz.</p>
+        <span class="pd-card-cta" data-i18n="teaser.ev.cta">Ver todos los eventos &rarr;</span>
       </div>
     </a>
 
@@ -256,15 +271,15 @@
   <!-- PRECIOS -->
   <section id="precios">
     <div class="section-header reveal" style="position:relative;z-index:1;">
-      <span class="section-tag">Membres&iacute;as</span>
-      <h2 class="section-title">Planes y <span class="red">Precios</span></h2>
+      <span class="section-tag" data-i18n="pre.tag">Membres&iacute;as</span>
+      <h2 class="section-title" data-i18n="pre.title">Planes y <span class="red">Precios</span></h2>
       <div class="divider"></div>
-      <p class="desc">Inversi&oacute;n m&iacute;nima, resultados m&aacute;ximos. Sin contratos de permanencia.</p>
+      <p class="desc" data-i18n="pre.desc">Inversi&oacute;n m&iacute;nima, resultados m&aacute;ximos. Sin contratos de permanencia.</p>
     </div>
 
     <div class="precios-grid">
       <div class="precio-card reveal-left">
-        <p class="plan-name">Por Disciplina</p>
+        <p class="plan-name" data-i18n="pre.p1.name">Por Disciplina</p>
         <div class="precio-amount">
           <span class="precio-num">250</span>
           <div>
@@ -272,20 +287,20 @@
             <span class="precio-period">/ mes</span>
           </div>
         </div>
-        <p class="plan-desc">Elige una disciplina y entrena sin l&iacute;mites.</p>
+        <p class="plan-desc" data-i18n="pre.p1.desc">Elige una disciplina y entrena sin l&iacute;mites.</p>
         <ul class="plan-features">
-          <li><span class="feature-dot"></span> Acceso a 1 disciplina</li>
-          <li><span class="feature-dot"></span> Clases ilimitadas</li>
-          <li><span class="feature-dot"></span> Instructores certificados</li>
-          <li><span class="feature-dot"></span> Apto para todas las edades</li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p1.f1">Acceso a 1 disciplina</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p1.f2">Clases ilimitadas</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p1.f3">Instructores certificados</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p1.f4">Apto para todas las edades</span></li>
         </ul>
-        <a href="https://wa.me/59177338339" target="_blank" class="btn-outline" style="display:block;text-align:center;padding:0.9rem;">
+        <a href="https://wa.me/59177338339" target="_blank" class="btn-outline" style="display:block;text-align:center;padding:0.9rem;" data-i18n="pre.p1.btn">
           Elegir disciplina
         </a>
       </div>
       <div class="precio-card featured reveal-right">
-        <span class="badge-recommended">Recomendado</span>
-        <p class="plan-name">Paquete Completo</p>
+        <span class="badge-recommended" data-i18n="pre.p2.badge">Recomendado</span>
+        <p class="plan-name" data-i18n="pre.p2.name">Paquete Completo</p>
         <div class="precio-amount">
           <span class="precio-num">300</span>
           <div>
@@ -293,28 +308,28 @@
             <span class="precio-period">/ mes</span>
           </div>
         </div>
-        <p class="plan-desc">Acceso total al gym y todas las disciplinas.</p>
+        <p class="plan-desc" data-i18n="pre.p2.desc">Acceso total al gym y todas las disciplinas.</p>
         <ul class="plan-features">
-          <li><span class="feature-dot"></span> Todas las disciplinas incluidas</li>
-          <li><span class="feature-dot"></span> Zona de maquinas y gym</li>
-          <li><span class="feature-dot"></span> Clases ilimitadas</li>
-          <li><span class="feature-dot"></span> Instructores certificados</li>
-          <li><span class="feature-dot"></span> Apto para todas las edades</li>
-          <li><span class="feature-dot"></span> Mejor valor del mercado</li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p2.f1">Todas las disciplinas incluidas</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p2.f2">Zona de maquinas y gym</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p2.f3">Clases ilimitadas</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p2.f4">Instructores certificados</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p2.f5">Apto para todas las edades</span></li>
+          <li><span class="feature-dot"></span> <span data-i18n="pre.p2.f6">Mejor valor del mercado</span></li>
         </ul>
-        <a href="https://wa.me/59177338339" target="_blank" class="btn-primary" style="display:block;text-align:center;">
+        <a href="https://wa.me/59177338339" target="_blank" class="btn-primary" style="display:block;text-align:center;" data-i18n="pre.p2.btn">
           &iexcl;Lo quiero!
         </a>
       </div>
     </div>
-    <p class="precios-note">* Consulta disponibilidad y horarios especiales para ni&ntilde;os via WhatsApp</p>
+    <p class="precios-note" data-i18n="pre.note">* Consulta disponibilidad y horarios especiales para ni&ntilde;os via WhatsApp</p>
   </section>
 
   <!-- GALERIA -->
   <section id="galeria">
     <div class="section-header reveal">
-      <span class="section-tag">Nuestro Mundo</span>
-      <h2 class="section-title">Galer&iacute;a</h2>
+      <span class="section-tag" data-i18n="gal.tag">Nuestro Mundo</span>
+      <h2 class="section-title" data-i18n="gal.title">Galer&iacute;a</h2>
       <div class="divider"></div>
     </div>
 
@@ -351,8 +366,8 @@
     <div class="contacto-bg"></div>
     <div class="contacto-inner">
       <div class="section-header reveal">
-        <span class="section-tag">Estamos aqu&iacute;</span>
-        <h2 class="section-title">Contacto</h2>
+        <span class="section-tag" data-i18n="con.tag">Estamos aqu&iacute;</span>
+        <h2 class="section-title" data-i18n="con.title">Contacto</h2>
         <div class="divider"></div>
       </div>
       <div class="contacto-grid">
@@ -360,48 +375,48 @@
           <div class="info-item">
             <div class="info-icon">&#128241;</div>
             <div>
-              <p class="info-label">WhatsApp</p>
+              <p class="info-label" data-i18n="con.wp.label">WhatsApp</p>
               <a href="https://wa.me/59177338339" class="info-value">+591 77338339</a>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">&#128280;</div>
             <div>
-              <p class="info-label">Facebook</p>
+              <p class="info-label" data-i18n="con.fb.label">Facebook</p>
               <a href="https://www.facebook.com/knockoutbolivia" target="_blank" class="info-value">/knockoutbolivia</a>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">&#128205;</div>
             <div>
-              <p class="info-label">Ubicaci&oacute;n</p>
-              <span class="info-value plain">Santa Cruz de la Sierra, Bolivia</span>
+              <p class="info-label" data-i18n="con.loc.label">Ubicaci&oacute;n</p>
+              <span class="info-value plain" data-i18n="con.loc.val">Santa Cruz de la Sierra, Bolivia</span>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">&#128336;</div>
             <div>
-              <p class="info-label">Horarios</p>
-              <span class="info-value plain">Lun &ndash; Sab: 6:00 AM &ndash; 9:00 PM</span><br>
-              <span class="info-value plain">Domingo: 8:00 AM &ndash; 12:00 PM</span>
+              <p class="info-label" data-i18n="con.hrs.label">Horarios</p>
+              <span class="info-value plain" data-i18n="con.hrs.v1">Lun &ndash; Sab: 6:00 AM &ndash; 9:00 PM</span><br>
+              <span class="info-value plain" data-i18n="con.hrs.v2">Domingo: 8:00 AM &ndash; 12:00 PM</span>
             </div>
           </div>
           <div class="wako-box">
-            <p class="tag">Reconocimiento oficial</p>
-            <p class="name">Avalados por WAKO</p>
-            <p class="sub">World Association of Kickboxing Organizations</p>
+            <p class="tag" data-i18n="con.wako.tag">Reconocimiento oficial</p>
+            <p class="name" data-i18n="con.wako.name">Avalados por WAKO</p>
+            <p class="sub" data-i18n="con.wako.sub">World Association of Kickboxing Organizations</p>
           </div>
         </div>
 
         <div class="contacto-cta-card reveal-right">
-          <h3>&iquest;Listo para <span class="red">entrenar?</span></h3>
-          <p>Cont&aacute;ctanos por WhatsApp para agendar tu clase de prueba gratuita. Sin compromiso.</p>
+          <h3 data-i18n="con.cta.title">&iquest;Listo para <span class="red">entrenar?</span></h3>
+          <p data-i18n="con.cta.desc">Cont&aacute;ctanos por WhatsApp para agendar tu clase de prueba gratuita. Sin compromiso.</p>
           <a href="https://wa.me/59177338339?text=Hola!%20Me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20las%20clases%20en%20Knockout%20Training%20Center"
              target="_blank" class="btn-whatsapp">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribenos por WhatsApp
+            <span data-i18n="con.cta.wa">Escribenos por WhatsApp</span>
           </a>
-          <a href="https://www.facebook.com/knockoutbolivia" target="_blank" class="btn-fb">
+          <a href="https://www.facebook.com/knockoutbolivia" target="_blank" class="btn-fb" data-i18n="con.cta.fb">
             Seguirnos en Facebook
           </a>
         </div>
@@ -415,10 +430,10 @@
       <div class="footer-brand">
         <div class="footer-brand-name">KNOCK<span class="red">OUT</span></div>
         <div class="footer-brand-sub">Training Center</div>
-        <p>Donde nacen los verdaderos campeones.<br>Santa Cruz de la Sierra, Bolivia.</p>
+        <p data-i18n="foot.slogan">Donde nacen los verdaderos campeones.<br>Santa Cruz de la Sierra, Bolivia.</p>
       </div>
       <div>
-        <p class="footer-col-title">Navegacion</p>
+        <p class="footer-col-title" data-i18n="foot.nav">Navegacion</p>
         <ul class="footer-links">
           <li><a href="#disciplinas">Disciplinas</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
@@ -430,7 +445,7 @@
         </ul>
       </div>
       <div>
-        <p class="footer-col-title">Contacto</p>
+        <p class="footer-col-title" data-i18n="foot.contact">Contacto</p>
         <div class="footer-contact-items">
           <a href="https://wa.me/59177338339">&#128241; +591 77338339</a>
           <a href="https://www.facebook.com/knockoutbolivia" target="_blank">&#128280; knockoutbolivia</a>
@@ -439,8 +454,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Knockout Training Center. Todos los derechos reservados.</p>
-      <p>Disciplina &middot; Pasion &middot; Honor</p>
+      <p data-i18n="foot.copy">&copy; 2026 Knockout Training Center. Todos los derechos reservados.</p>
+      <p data-i18n="foot.values">Disciplina &middot; Pasion &middot; Honor</p>
     </div>
     <div class="footer-dev">
       <span class="footer-dev-text">Dise&ntilde;ado &amp; desarrollado por</span>
@@ -450,6 +465,8 @@
       <span class="footer-dev-text">Desarrollador Web</span>
     </div>
   </footer>
+
+  <script src="i18n.js"></script>
 
   <!-- WhatsApp float -->
   <a href="https://wa.me/59177338339?text=Hola!%20Me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20las%20clases%20en%20Knockout%20Training%20Center"

@@ -12,6 +12,7 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="eventos.css" />
+  <link rel="stylesheet" href="i18n.css" />
 </head>
 <body>
 
@@ -19,28 +20,42 @@
   <nav id="navbar">
     <a href="index.html" class="nav-logo">KNOCK<span>OUT</span></a>
     <ul class="nav-links">
-      <li><a href="index.html#disciplinas">Disciplinas</a></li>
-      <li><a href="index.html#nosotros">Nosotros</a></li>
-      <li><a href="index.html#precios">Precios</a></li>
-      <li><a href="campeones.html" style="color:#CC0000;">Campeones</a></li>
-      <li><a href="eventos.html" style="color:#CC0000;">Eventos</a></li>
-      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="index.html#disciplinas" data-i18n="nav.disciplinas">Disciplinas</a></li>
+      <li><a href="index.html#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
+      <li><a href="index.html#precios" data-i18n="nav.precios">Precios</a></li>
+      <li><a href="campeones.html" style="color:#CC0000;" data-i18n="nav.campeones">Campeones</a></li>
+      <li><a href="eventos.html" style="color:#CC0000;" data-i18n="nav.eventos">Eventos</a></li>
+      <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
     </ul>
-    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscr&iacute;bete</a>
+    <div class="lang-switcher">
+      <span class="lang-btn active" data-lang="es" onclick="setLanguage('es')">ES</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</span>
+    </div>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta" data-i18n="nav.cta">Inscr&iacute;bete</a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"             onclick="closeMenu()">Inicio</a>
-    <a href="index.html#disciplinas" onclick="closeMenu()">Disciplinas</a>
-    <a href="index.html#nosotros"    onclick="closeMenu()">Nosotros</a>
-    <a href="index.html#precios"     onclick="closeMenu()">Precios</a>
-    <a href="campeones.html"         onclick="closeMenu()" style="color:#CC0000;">Campeones</a>
-    <a href="eventos.html"           onclick="closeMenu()" style="color:#CC0000;">Eventos</a>
-    <a href="index.html#contacto"    onclick="closeMenu()">Contacto</a>
-    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta">Inscr&iacute;bete ahora</a>
+    <a href="index.html"             onclick="closeMenu()" data-i18n="nav.inicio">Inicio</a>
+    <a href="index.html#disciplinas" onclick="closeMenu()" data-i18n="nav.disciplinas">Disciplinas</a>
+    <a href="index.html#nosotros"    onclick="closeMenu()" data-i18n="nav.nosotros">Nosotros</a>
+    <a href="index.html#precios"     onclick="closeMenu()" data-i18n="nav.precios">Precios</a>
+    <a href="campeones.html"         onclick="closeMenu()" style="color:#CC0000;" data-i18n="nav.campeones">Campeones</a>
+    <a href="eventos.html"           onclick="closeMenu()" style="color:#CC0000;" data-i18n="nav.eventos">Eventos</a>
+    <a href="index.html#contacto"    onclick="closeMenu()" data-i18n="nav.contacto">Contacto</a>
+    <div class="lang-switcher" style="margin:0.5rem auto;">
+      <span class="lang-btn active" data-lang="es" onclick="setLanguage('es');closeMenu()">ES</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="en" onclick="setLanguage('en');closeMenu()">EN</span>
+      <span class="lang-dot">·</span>
+      <span class="lang-btn" data-lang="pt" onclick="setLanguage('pt');closeMenu()">PT</span>
+    </div>
+    <a href="https://wa.me/59177338339" target="_blank" class="nav-cta" data-i18n="nav.cta.mobile">Inscr&iacute;bete ahora</a>
   </div>
 
   <!-- HERO -->
@@ -48,17 +63,17 @@
     <div class="ev-hero-bg" style="background-image:url('img/648888811_1457408725751913_1342189154181205470_n.jpg'); background-position:center 30%;"></div>
     <div class="ev-hero-overlay"></div>
     <div class="ev-hero-content">
-      <span class="section-tag">Knockout Training Center</span>
-      <h1 class="ev-hero-title">Eventos<br><span class="red">&amp; Combates</span></h1>
-      <p class="ev-hero-sub">Veladas de MMA y Kickboxing en Santa Cruz de la Sierra &mdash; Resultados, combates y pr&oacute;ximas fechas.</p>
+      <span class="section-tag" data-i18n="ev.tag">Knockout Training Center</span>
+      <h1 class="ev-hero-title" data-i18n="ev.title">Eventos<br><span class="red">&amp; Combates</span></h1>
+      <p class="ev-hero-sub" data-i18n="ev.sub">Veladas de MMA y Kickboxing en Santa Cruz de la Sierra &mdash; Resultados, combates y pr&oacute;ximas fechas.</p>
     </div>
   </section>
 
   <!-- TABS -->
   <div class="ev-tabs">
-    <div class="ev-tab" data-filter="past" onclick="filterEvents('past')">Pasados</div>
-    <div class="ev-tab active" data-filter="all" onclick="filterEvents('all')">Todos</div>
-    <div class="ev-tab" data-filter="next" onclick="filterEvents('next')">Pr&oacute;ximos</div>
+    <div class="ev-tab" data-filter="past" onclick="filterEvents('past')" data-i18n="ev.tab.past">Pasados</div>
+    <div class="ev-tab active" data-filter="all" onclick="filterEvents('all')" data-i18n="ev.tab.all">Todos</div>
+    <div class="ev-tab" data-filter="next" onclick="filterEvents('next')" data-i18n="ev.tab.next">Pr&oacute;ximos</div>
   </div>
 
   <!-- PRÓXIMOS EVENTOS -->
@@ -394,6 +409,7 @@
       }
     }
   </script>
+  <script src="i18n.js"></script>
 
 </body>
 </html>
